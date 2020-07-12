@@ -19,8 +19,12 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
 	font-size: 3em;
-	font-family: 'Playfair Displayay', serif;
+	
 	font-weight: 900!important;
+
+}
+h1,h2,h3{
+	font-family: 'Playfair Displayay', serif;
 }
 h1 span{
 	font-weight: 100;
@@ -40,6 +44,7 @@ h1 span{
 
 }
 .home h1 {
+	    margin-bottom: 1.4em;
 position: relative;
 }
 h1,h2 {
@@ -48,6 +53,9 @@ h1,h2 {
 
 h3 {
 	margin: 20px 0;
+	font-size: 1.1em !important;
+	    font-weight: 600;
+}
 }
 
 h4 {
@@ -77,7 +85,7 @@ img{
 .banner_hero img{
 	border-radius: 15px;
 }
-.banner_hero{
+.banner_hero,.newPostList{
 	position: relative;
 }
 .navbar ul li a{
