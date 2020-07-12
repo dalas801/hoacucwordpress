@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- <link rel="icon" href="img/favicon.ico"> -->
+	
+	<title>Hiên Cúc Vàng</title>
+	
+	<!-- Bootstrap core CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Font Awesome Icons -->
+	<link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/glide.theme.min.css" rel="stylesheet">
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,900&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,900&family=Quicksand:wght@400;500;600;700&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+	
+	
+
+</head>
+
+<body>
+	
+	<!-- HEADER
+	================================================== -->
+	<header class="site-header" role="banner">
+		
+		<!-- NAVBAR
+		================================================== -->
+		<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">
+  	<img src="assets/img/logo@2x.png" alt="hoa cuc vang logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto nav-custom">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">TRÀ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">SỨC KHỎE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CÔNG THỨC</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">ĐÁNH GIÁ</a>
+      </li>
+     <button class="btn btn-login" type="submit">Login</button>
+    </ul>
+  </div>
+</nav>
+	</header>
+
+
+    <!-- HERO
+    ================================================== -->
+    <section id="hero" data-type="background" data-speed="5">
+
+
+    	<div class="banner_hero">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide"><img src="assets/img/Banner1.png" alt=""></li>
+      <li class="glide__slide"><img src="assets/img/Banner2.png" alt=""></li>
+
+      <li><img src="assets/img/Banner3.png" alt=""></li>
+    </ul>
+  </div>
+   <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--right" data-glide-dir="<"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    <button class="glide__arrow glide__arrow--left" data-glide-dir=">"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+  </div>
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+    <button class="glide__bullet" data-glide-dir="=0"></button>
+    <button class="glide__bullet" data-glide-dir="=1"></button>
+    <button class="glide__bullet" data-glide-dir="=2"></button>
+  </div>
+   <!-- <div id="dots" class="glider-dots"> </div> -->
+</div>
+
+
+    </section>
+    <section id="newPost" class="home">
+    	<div class="container">
+    	<h1>Bài viết<span> mới nhất</span></h1>
+    	</div>
+    	
+    </section>
+	
+	
+	
+	<!-- FOOTER
+	================================================== -->
+	<footer>
+		<div class="container">
+			
+		</div><!-- container -->
+	</footer>
+
+
+	<!-- MODAL
+	================================================== -->
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery-3.5.1.slim.min.js"></script> -->
+
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+     <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+     <script>
+
+  new Glide('.banner_hero',{
+  	 perView: 2,
+  	 type:'carousel',
+  	 dots:'#dots',
+  	  focusAt: 'center',
+  	  breakpoints:{
+  	  	800:{
+  	  		perView:1
+  	  	}
+  	  }
+  	  
+  }).mount();
+
+</script>
+
+    <script src="assets/js/main.js"></script>
+    
+ 
+  
+</body>
+</html>

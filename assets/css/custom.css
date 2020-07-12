@@ -1,0 +1,244 @@
+
+
+body {
+	/*margin-top: 50px;*/
+	font-family: 'quick-sand', Helvetica, sans-serif;
+	font-size: 1em;
+	background-color: 
+	color:black;
+	
+}
+
+/* ==== GLOBAL ==== */
+
+h1,h2,h3,h4,h5,h6 {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: 'Playfair Displayay', serif;
+	font-weight: 900!important;
+}
+h1 span{
+	font-weight: 100;
+}
+.home h1 :before{
+	    content: "New posts";
+    position: absolute;
+    font-family: 'Roboto Slab', serif;
+    font-size: 100px;
+    font-weight: 900;
+    left: 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ececec8f;
+    color: #fff;
+    z-index: -1;
+    bottom: 0;
+
+}
+.home h1 {
+position: relative;
+}
+h1,h2 {
+	margin: 0 0 40px;
+}
+
+h3 {
+	margin: 20px 0;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+p.lead {
+	font-weight: normal;
+}
+
+p {
+	margin: 0 0 15px;
+}
+
+a:link, a:visited {
+	color: #dd5638;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #c9302c;
+}
+img{
+	max-width: 100%;
+}
+
+.banner_hero img{
+	border-radius: 15px;
+}
+.banner_hero{
+	position: relative;
+}
+.navbar ul li a{
+	color: #000 !important;
+	    padding-left: 2em;
+    padding-right: 2em;
+}
+.navbar ul li a:hover{
+	background-color: unset;
+
+}
+
+.navbar-brand img{
+	    width: 110px;
+}
+.navbar-nav ul li a.active{
+	
+}
+.navbar-nav ul li a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ff2e2e;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+}
+.navbar-nav ul li > a:hover:before,
+.navbar-nav ul li > a.active:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+}
+
+
+
+.navbar{
+	padding:0;
+}
+.navbar-nav li a{
+	font-size: 1.1em;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+       margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding:0.5rem 0.2rem;
+}
+.navbar .btn-login{
+	background-color: #4ECDC4;
+    
+    color: white;
+    font-weight: 600;
+    padding: 0 2.5em;
+    border-radius: 20px;
+    border: none;
+     transition-duration: 0.4s;
+  -webkit-transition:0.4s;
+   -moz-transition:0.4s;
+   -o-transition:0.4s;
+    transition-timing-function: ease-out;
+     transition-property: background-color;
+}
+.btn-login:hover{
+	background-color: #FFE66D;
+	 transition-property: background-color;
+  transition-duration: 0.4s;
+  -webkit-transition:0.4s;
+  -moz-transition:0.4s;
+   -o-transition:0.4s;
+  transition-timing-function: ease-out;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #000;
+        position: relative;
+}
+.navbar-light .navbar-nav .nav-link:hover:before,.navbar-light .navbar-nav .active .nav-link:before{
+
+ 	 height: 8px;
+  right: auto;
+    transition-property: height;
+   -webkit-transition:0.5s;
+   -moz-transition:0.5s;
+   -o-transition:0.5s;
+  transition-timing-function: ease-out;
+}
+
+.navbar-light .navbar-nav .nav-link:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  left: 0;
+  width: 100%;
+  bottom: 12px;
+  background: #FFF4C0;
+  height: 0px;
+ 
+  transition-property: height;
+     -webkit-transition:0.5s;
+   -moz-transition:0.5s;
+   -o-transition:0.5s;
+  transition-timing-function: ease-out;
+
+}
+.btn:focus{
+	outline: none !important;
+   box-shadow: none;
+}
+.banner_hero .glide__arrow{
+	padding: 15px 17px !important;
+	    border-radius: 50% !important;
+}
+
+section{
+	margin-bottom: 5em;
+}
+
+
+
+
+
+/* ==== MEDIA QUERIES ==== */
+@media screen and (min-width : 1024px)  {
+	.navbar .btn-login{
+	margin-left: 2em;
+}
+}
+@media screen and (max-width : 991px) {
+	.navbar-light .navbar-nav .nav-link:hover:before,.navbar-light .navbar-nav .active .nav-link:before{
+
+ 	 height: 0;
+}
+.navbar-light .navbar-nav .active .nav-link{
+	color: #FFE66D;
+}
+.navbar-light .navbar-nav .nav-link:before{
+  content: "";
+  
+
+}
+}
+
+@media screen and (max-width : 768px) {
+	.logo {
+		width: 50%;
+	}
+	.btn.btn-login{
+	    margin-bottom: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+    
+    padding: 1rem 0;	
+
+}
+
+@media screen and (max-width : 568px) {
+	
+}
