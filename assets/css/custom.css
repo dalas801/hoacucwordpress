@@ -34,7 +34,46 @@ h1 span{
 	font-weight:600;
 
 }
+#myVideo{
+  position: absolute;
+   right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+   -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 0;
+     left: 50%;
+    top: 50%;
+}
+.quote_text{
+ display: table;
+  margin: 0 auto;
+font-weight: 600;
+}
+ul{
+   list-style: none;
+  padding:0;
+}
+.menu-footer{
+  text-align: center;
+}
+footer ul{
+ 
+    display: inline-flex;
 
+}
+footer ul li {
+  padding: 2em;
+}
+.quote_text p{
+  text-align: center;
+}
+.quote_text p span{
+  display: block;
+}
 a{
 	opacity: 1;
 }
@@ -166,8 +205,12 @@ background: #fff8d4;
 padding-top: 80px;
 
 }
+#health .imgContainer{
+      height: 280px;
+    overflow: hidden;
+}
 #health h1 :before{
-  content: "your health";
+  content: "Your Health";
 }
 #life{
   margin-top: 10em;
@@ -176,6 +219,9 @@ padding-top: 80px;
     content: "Tea and Life";
     z-index: -1;
 
+}
+.reviewInner{
+  margin:2em 0;
 }
 #newPost h1,#health h1,#recipe h1{
 	    margin-bottom: 1.4em;
@@ -517,13 +563,37 @@ opacity:1;
 }
 #recipe:before{
 	content: "";
-		    background-image: url(../img/flower-white.png);
+		    background-image: url(../img/flower_illus.png);
     background-repeat: no-repeat;
-    height: 40%;
+    height: 50%;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+#newPost .swiper-slide:hover{
+  box-shadow: 12px 14px 33px -2px rgba(9,18,50,.1);
+}
+.swiper-slide-active{
+padding-bottom: 3em;
+    display: block;
+    margin: 0 0 3em 0;
+    width: 400px !important;
+    box-shadow: 12px 14px 33px -2px rgba(9,18,50,.1);
+}
+.swiper-slide-active .description{
+  display: block !important;
+}
+.swiper-slide .description{
+  display: none;
+
+}
+.swiper-pagination-bullet-active {
+   
+    background-color: #FFE66D !important;
+}
+#newPost .detailPost h3 {
+    max-width: 70%;
 }
 #life:before{
 	/*content: "";
