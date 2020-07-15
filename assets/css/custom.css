@@ -66,7 +66,7 @@ footer ul{
 
 }
 footer ul li {
-  padding: 2em;
+ padding: 2em 1em;
 }
 .quote_text p{
   text-align: center;
@@ -160,43 +160,51 @@ opacity: 0.5 !important;
 	justify-content: space-between;
 	display: flex;
 }
-#newPost h1 :before,#life h1 :before,#health h1 :before,#review h1 :before,#recipe h1 :before,.inner-header :before{
+#newPost h1 :before,#life h1 :before,#health h1 :before,#review h1 :before,.recipe-container :before,.inner-header :before{
 	    
     position: absolute;
     font-family: 'Roboto Slab', serif;
     font-size: 100px;
     font-weight: 900;
-    left: 0;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ececec8f;
-    color: #fff;
-    z-index: -1;
-    bottom: 0;
+   
+   color: #F9F9F9;
+   
+      z-index: -1;
+   
 
 }
 
 
-#health h1 :before{
-color: #fff0;
-}
 #newPost h1 :before{
-    content: "New posts";
+       content: "New posts";
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+     bottom: -4.5em;
+    left: 0;
 
 }
 #review h1 :before{
     content: "Tea Reviews";
+    top: -54px;
+    left: 0;
 
 }
-#recipe h1 :before{
+h1{
+  color: #F5CB5C;
+}
+h1 span{
+  color: #000;
+}
+.recipe-container :before{
     content: "Recipes For You";
-    content: "Recipes For You";
-    color: #7fffd400;
-    font-size: 80px;
-    -webkit-text-stroke-color: #f1eedc;
+  
     bottom: -28px;
 
 }
+.recipe-container{
+  position: relative;
+}
 #recipe{
+  overflow: hidden;
 background: #fff8d4;
     padding: 4em 0;
     position: relative;
@@ -205,20 +213,22 @@ background: #fff8d4;
 padding-top: 80px;
 
 }
-#health .imgContainer{
-      height: 280px;
-    overflow: hidden;
-}
+
 #health h1 :before{
   content: "Your Health";
+  top: 27px;
+    left: 0;
 }
 #life{
-  margin-top: 10em;
+  margin-top: 5em;
 }
 #life .inner-header h1 :before{
-    content: "Tea and Life";
-    z-index: -1;
+   /* content: "Tea and Life";
+    z-index: -1;*/
 
+}
+#life .inner-header{
+margin-bottom: 4em;
 }
 .reviewInner{
   margin:2em 0;
@@ -236,6 +246,10 @@ position: relative;
         
 #life .postslide:first-child {
   /*margin-top: 4em;*/
+}
+#life .postslide{
+  display: flex;
+
 }
 h1,h2 {
 	margin: 0 0 40px;
@@ -509,16 +523,18 @@ section{
 }
 
 #life{
-  background-color: #FFF8D4;
-      padding: 50px;
+  
+    position: relative;
+}
+#life :before{
+/*  content: "";
+  position: absolute;
+  background-color: #FFF8D4;*/
 }
 .life-inner{
-  padding: 50px;
-    background-color: #fff;
+
 }
-#life .postslide{
-  padding: 50px;
-}
+
 .health-inner{
 display: flex;
 }
@@ -542,7 +558,7 @@ opacity:1;
   max-width: 300px;
       margin: 2em 0;
 }
-#recipe  span{
+#recipe  span,footer  span{
   display: block;
 }
 
@@ -631,23 +647,57 @@ padding: 0 0 2em 0 !important;
 }
 footer{
 	background: #FFF8D4;
-	padding: 3em 0 0 ;
+	/*padding: 3em 0 0 ;*/
     margin-top: 100px;
+    position: relative;
+}
+footer:before{
+  content: "";
+  background: #fff;
+   position: absolute;
+ width: 30%;
+    height: 100%;
+    right: 0;
+}
+.footer_top{
+  position: relative;
+  padding: 4em 0 4em 0;
+}
+.footer_top:before{
+  content:"";
+  background-image: url(../img/la-tra.png);
+
+    height: 100%;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    background-size: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+}
 }
 footer .lead{
   position: relative;
   z-index: 1;
+
+}
+.footer_bot{
+ background: #FFF8D4;
+    z-index: 1;
+    position: relative;
+        padding: 2em 0 0;
 }
 footer .lead:before{
 content: "";
-    z-index: -1;
+  
     position: absolute;
     width: 245px;
-    /* max-width: 100%; */
+     max-width: 100%; 
     height: 245px;
     background-size: 100% 100%;
-    bottom: -255px;
-    left: -35px;
+   top:15em;
+    left: 0;
+    background-repeat: no-repeat;
     background-image: url(../img/flower_white.png);
 }
 .btnRegister{
@@ -662,23 +712,82 @@ content: "";
   color: white;
   background-color:#69B178;
 }
-.footer_top{
-  padding: 2em 0 4em 0;
-}
+
 .form-footer{
 padding: 4em 2em;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 3px 99px #55420429;
+    box-shadow: 0px 3px 62px #55420429;
 }
 .form-footer .form-control{
   padding: 1.5em 1rem;
     border-radius: 10px;
 }
+.social-ico{
+     width: 35px;
+    opacity: 1;
+    transition: all .6s;
+    margin: 0.3em;
+}
+.social-ico:hover{
+      opacity: 0.6;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
+}
+.quote_text:before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    z-index: -1;
+    left: 40%;
+    position: absolute;
+    top: -20px;
+    background-repeat: no-repeat;
+    background-image: url(../img/Quotemarks.svg);
+}
+.quote_text{
+  position: relative;
+   z-index: 1;
+}
 
-
-
+.header-top{
+  background-color:#fffbe7;
+  padding:0.5em 0;
+}
+.slogan{
+  font-weight: 500;
+    color: #F5CB5C;
+    font-size: 0.9em;
+}
+.header-top .container{
+  display: flex;
+    justify-content: space-between;
+}
+.search-form__container{
+  display: flex;
+}
+.search-form__icon{
+      color: #F5CB5C;
+}
+.header-top input{
+margin: 0;
+    border: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+        border-bottom: 1px solid #F5CB5C;
+  }
+  .header-top input::placeholder{
+    color: #D3CEB5;
+  }
+  .header-top input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #D3CEB5;
+}
 /* ==== MEDIA QUERIES ==== */
 @media screen and (min-width : 1024px)  {
 	.navbar .btn-login{
@@ -701,6 +810,21 @@ padding: 4em 2em;
 }
 
 @media screen and (max-width : 768px) {
+  .navbar-toggler{
+        padding: .75rem .75rem !important;
+        border-radius: 50% !important;
+  }
+  .btn-login{
+        padding: 0.6em 3em !important;
+    margin: 1em;
+  }
+  #newPost h1 :before{
+
+    left: 0.5em;
+  }
+  .header-top{
+    display: none;
+  }
 	.logo {
 		width: 50%;
 	}
@@ -715,18 +839,62 @@ padding: 4em 2em;
 #life .postslide{
   padding: 0px;
 }
+#health .description{
+    display: none;
+  }
 }
 
 @media screen and (max-width : 568px) {
-  footer .lead:before{
+  .health-banner{
+        margin-bottom: 1.8em;
+  }
+  #review h1 :before,#health h1 :before, #newPost h1 :before{
+    display: none;
+  }
+  .form-footer {
+    padding: 3em 1em;
+}
+
+  
+  .navbar-collapse{
+  
+  }
+  .navbar-nav{
+        align-items: center;
+  }
+  #recipe:before{
+      top: -3%;
+    right: -35%;
+    left: unset;
+  }
+  .footer_top :before{
+    top:-100;
+   background-size: 209px;
+    width: 209px;
+  }
+  #recipe :before{
+        top: 0;
+    left: 154px;
+  }
+  #recipe .postslide{
+    padding: 0 0 2em 0;
+  }
+  footer:before{
+
+  background:unset;
+  
+}
+.footer_top:before{
+  background-size: 200px;
+  width: 200px;
+}
+  footer .lead :before{
     display: none;
   }
 	#health .imgContainer{
     height: auto;
   }
-  #health .description{
-    display: none;
-  }
+  
   #health .col-sm-4:first-child .description{
     display: block;
   }
