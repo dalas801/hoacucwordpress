@@ -78,6 +78,29 @@ footer ul li {
 a{
 	opacity: 1;
 }
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 2em !important;
+
+
+}
+.arrow-slide{
+  display: flex;
+    justify-content: center;
+}
+.swiper-button-prev,.swiper-button-next{
+    color: #6eb47d !important;
+    
+   
+
+}
+.swiper-button-next{
+transform: translateX(10px);
+
+}
+.swiper-button-prev{
+transform: translateX(-10px);
+
+}
 a:hover{
 	text-decoration:none !important;
 	color: inherit !important;
@@ -161,7 +184,7 @@ opacity: 0.5 !important;
 	justify-content: space-between;
 	display: flex;
 }
-#newPost h1 :before,#life h1 :before,#health h1 :before,#review h1 :before,.recipe-container :before,.inner-header :before{
+#newPost h1 :before,#life h1 :before,#health h1 :before,#review h1 :before,#recipe .container:before,#life .inner-header:before{
 	    
     position: absolute;
     font-family: 'Roboto Slab', serif;
@@ -174,8 +197,17 @@ opacity: 0.5 !important;
    
 
 }
-
-
+#life .inner-header:before{
+content: "tea and life";
+-webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+right: -20%;
+    top: 100%;
+}
+#life .inner-header{
+  position: relative;
+}
 #newPost h1 :before{
        content: "New posts";
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
@@ -195,15 +227,17 @@ h1{
 h1 span{
   color: #000;
 }
-.recipe-container :before{
-    content: "Recipes For You";
-  
-    bottom: -28px;
+#recipe .container:before{
+   content: "Recipes For You";
+    top: -6%;
+    z-index: 0;
+    color: #fffbe7;
 
 }
-.recipe-container{
-  position: relative;
+#recipe .container{
+    position: relative;
 }
+
 #recipe{
   overflow: hidden;
 background: #fff8d4;
@@ -223,11 +257,19 @@ padding-top: 80px;
 #life{
   margin-top: 5em;
 }
-#life .inner-header h1 :before{
-   /* content: "Tea and Life";
-    z-index: -1;*/
-
+#life:before {
+    content: "";
+    background:#fff8d4;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
 }
+#life .container{
+  padding-top:4em;
+  padding-bottom: 4em;
+}
+
 #life .inner-header{
 margin-bottom: 4em;
 }
@@ -242,7 +284,7 @@ position: relative;
 
 #life .inner-header,#review .inner-header{
 	position: relative;
-	z-index: 1;
+
 }
         
 #life .postslide:first-child {
@@ -250,7 +292,11 @@ position: relative;
 }
 #life .postslide{
   display: flex;
+  position: relative;
 
+}
+#life .imgContainer{
+  margin-left: 4em;
 }
 h1,h2 {
 	margin: 0 0 40px;
@@ -295,6 +341,14 @@ img{
     font-weight: 500;
     color: #69B178;
     padding: 0.3em 0 0 0;
+}
+#life .date{
+  -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 0;
+    top: 15%;
 }
 .banner_hero img{
 	border-radius: 15px;
@@ -532,9 +586,7 @@ section{
   position: absolute;
   background-color: #FFF8D4;*/
 }
-.life-inner{
 
-}
 
 .health-inner{
 display: flex;
@@ -823,6 +875,10 @@ margin: 0;
   .header-top input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #D3CEB5;
 }
+.btn-mb{
+    display: none;
+   
+  }
 /* ==== MEDIA QUERIES ==== */
 @media screen and (min-width : 1024px)  {
 	.navbar .btn-login{
@@ -845,6 +901,13 @@ margin: 0;
 }
 
 @media screen and (max-width : 768px) {
+  #life .seeMore{
+    display: none;
+  }
+  .btn-mb{
+    display: block !important;
+    text-align: center;
+  }
   .navbar-toggler{
         padding: .75rem .75rem !important;
         border-radius: 50% !important;
@@ -873,8 +936,12 @@ margin: 0;
 }
 #life .postslide{
   padding: 0px;
+  margin-bottom: 2em;
 }
-#health .description{
+#life .detailPost{
+  padding-top: 0;
+}
+#health .description,#life .description{
     display: none;
   }
 }
@@ -886,7 +953,7 @@ margin: 0;
   .health-banner{
         margin-bottom: 1.8em;
   }
-  #review h1 :before,#health h1 :before, #newPost h1 :before{
+  #review h1 :before,#health h1 :before, #newPost h1 :before,#life .inner-header:before,#recipe .container:before{
     display: none;
   }
   .form-footer {

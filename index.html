@@ -19,6 +19,7 @@
 		<script src="assets/js/allfontawesome.min.js"></script>
 		<!-- Custom CSS -->
 		<link href="assets/css/custom.css" rel="stylesheet">
+
 		<link href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css" rel="stylesheet">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/glide.theme.min.css" rel="stylesheet">
@@ -188,7 +189,35 @@
 		
 	</div>
 </div>
+<div class="swiper-slide"><div class="imgContainer">
+				<a href="#"> <img href="#" src="assets/img/post4.png" alt=""></a>
+			</div>
+			<div class="detailPost">
+				<div class="date">12.03.2020</div>
+				<div class="title">
+					<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				</div>
+				<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+				
+			</div>
+		</div>
+		<div class="swiper-slide"><div class="imgContainer">
+			<a href="#"> <img href="#" src="assets/img/post1.png" alt=""></a>
+		</div>
+		<div class="detailPost">
+			<div class="date">12.03.2020</div>
+			<div class="title">
+				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+			</div>
+			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+			
+		</div>
+	</div>
 </div>
+<div class="arrow-slide">
+  <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 <div class="swiper-pagination"></div>
 </div>
 </section>
@@ -230,7 +259,11 @@
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
 		</div>
 	</div>
+
 </div>
+<div class="seeMore btn-mb">
+		<a href="#" ><span>Xem thêm</span></a>
+	</div>
 </div>
 </div>
 </section>
@@ -294,7 +327,9 @@
 	<div class="recipe-inner">
 	</div>
 </div>
-<div class="col-sm-4">
+<div class="col-sm-8">
+	<div class="row">
+<div class="col-sm-6">
 	<div class="postslide left">
 		<div class="imgContainer">
 			<a href="#"> <img href="#" src="assets/img/post5.png" alt=""></a>
@@ -308,7 +343,9 @@
 		</div>
 	</div>
 </div>
-<div class="col-sm-4">
+<div class="col-sm-6">
+	<div class="row">
+		<div class="col-sm-12 col-6">
 	<div class="postslide">
 		<div class="imgContainer">
 			<a href="#"> <img href="#" src="assets/img/post2.png" alt=""></a>
@@ -321,6 +358,8 @@
 			
 		</div>
 	</div>
+</div>
+<div class="col-sm-12 col-6">
 	<div class="postslide">
 		<div class="imgContainer">
 			<a href="#"> <img href="#" src="assets/img/post1.png" alt=""></a>
@@ -334,7 +373,10 @@
 		</div>
 	</div>
 	
-	
+	</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -374,7 +416,7 @@
 		<div class="detailPost">
 			
 			<div class="title">
-				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				<a href="#"><h3 >Bộ sưu tập công thức trà khiến bạn “yêu đời” ngay tức thì</h3></a>
 			</div>
 			
 		</div>
@@ -398,7 +440,7 @@
 		<div class="detailPost">
 			
 			<div class="title">
-				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				<a href="#"><h3 >Đúng là chẳng có gì dễ dàng, kể cả việc pha một ly trà và uống sao cho đúng cách</h3></a>
 			</div>
 			
 		</div>
@@ -422,7 +464,7 @@
 		<div class="detailPost">
 			
 			<div class="title">
-				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				<a href="#"><h3 >Trà tắc tự pha ngon lành chất lượng</h3></a>
 			</div>
 			
 		</div>
@@ -536,22 +578,33 @@ new Glide('.banner_hero',{
 <!-- Initialize Swiper -->
 <script>
 var swiper = new Swiper('.swiper-container', {
-slidesPerView: 5,
+slidesPerView: 6,
 // centeredSlides: true,
 spaceBetween: 30,
-loopAdditionalSlides: 100,
+// loopAdditionalSlides: 100,
 // loop: true,
 grabCursor: true,
+// loopFillGroupWithBlank: true,
+navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 pagination: {
 el: '.swiper-pagination',
 clickable: true,
+ 
 },
-//       breakpoints: {
-//       320: {
-//       slidesPerView: 2,
-//       spaceBetween: 20
-//     },
-// },
+      breakpoints: {
+      320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    640: {
+slidesPerView: 6,
+spaceBetween: 20
+},
+},
+
 });
 </script>
 <script>
@@ -566,6 +619,9 @@ pagination: {
 el: '.swiper-pagination',
 clickable: true,
 },
+ autoplay: {
+    delay: 3000,
+  },
 breakpoints: {
 320: {
 slidesPerView: 2,

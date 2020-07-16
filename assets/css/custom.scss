@@ -1,0 +1,12 @@
+@mixin transition($params) {
+  -webkit-transition: $params;
+     -moz-transition: $params;
+   -khtml-transition: $params;
+       -o-transition: $params;
+          transition: $params;
+}
+ img {
+   display: none !important;
+   width: 100px;
+  }
+  
