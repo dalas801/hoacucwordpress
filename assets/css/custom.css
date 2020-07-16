@@ -52,6 +52,7 @@ h1 span{
  display: table;
   margin: 0 auto;
 font-weight: 600;
+    font-size: 1.2em;
 }
 ul{
    list-style: none;
@@ -724,19 +725,49 @@ padding: 4em 2em;
     border-radius: 10px;
 }
 .social-ico{
-     width: 35px;
+     height: 45px;
+    width: 45px;
+    padding: 1em;
+  color: white;
+    border-radius: 50%;
     opacity: 1;
-    transition: all .6s;
+    transition: opacity .6s;
     margin: 0.3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.email-info span{
+  box-shadow: 0 -10px 0 0 #ffeec0 inset;
+}
+.social-ico:hover{
+  opacity: 0.8;
+}
+.facebook-ico{
+  background-color: #3b5999;
+}
+.insta-ico{
+  background-color: #e4405f;
+}
+.youtube-ico{
+  background-color: #cd201f;
+}
+.twitter-ico{
+  background-color: #55acee;
 }
 .social-ico:hover{
       opacity: 0.6;
 }
-.social{
+.social,.email-info{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
+}
+.social{
+margin: 1em;
 }
 .quote_text:before{
     content: "";
@@ -771,8 +802,12 @@ padding: 4em 2em;
 .search-form__container{
   display: flex;
 }
-.search-form__icon{
+.icon_color{
       color: #F5CB5C;
+      margin-right: 0.3em;
+}
+.menu-footer ul li:hover{
+  color: #F5CB5C;
 }
 .header-top input{
 margin: 0;
@@ -845,6 +880,9 @@ margin: 0;
 }
 
 @media screen and (max-width : 568px) {
+  .quote_text{
+    font-size: 1.1em;
+  }
   .health-banner{
         margin-bottom: 1.8em;
   }
