@@ -1,0 +1,78 @@
+.fixPosition .site-header .header-top {
+  display: none;
+}
+
+.fixPosition .site-header .navbar-brand img {
+  width: 45px;
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.fixPosition .site-header .navar {
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.logoImg {
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.navar {
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+#hero {
+  margin-top: 177px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: white;
+}
+
+.burgerBtn {
+  border-top: 2px solid #f85051;
+  height: 25px;
+  width: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  z-index: 30;
+  right: 20px;
+  top: 30px;
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.burgerBtn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  left: 0;
+  background: #f85051;
+  top: 10px;
+  -webkit-transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.burgerBtn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  left: 0;
+  background: #f85051;
+  bottom: 0;
+  -webkit-transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 1s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+/*# sourceMappingURL=customsas.css.map */
