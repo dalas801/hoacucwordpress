@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="assets/img/favicon.ico">
+		
+		<title>Hiên Cúc Vàng</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- Font Awesome Icons -->
+		<link href="assets/css/font-awesome/css/all.min.css" rel="stylesheet">
+		<script src="assets/js/allfontawesome.min.js"></script>
+		<!-- Custom CSS -->
+		<link href="assets/css/custom.css" rel="stylesheet">
+		<link href="assets/css/themify-icons.css" rel="stylesheet">
+		<link href="assets/css/customsas.css" rel="stylesheet">
+
+		<link href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css" rel="stylesheet">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/glide.theme.min.css" rel="stylesheet">
+		
+		<!-- Google Fonts -->
+		
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,900&family=Quicksand:wght@400;500;600;700&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	</head>
+	<body class="body">
+		
+		<!-- HEADER
+		================================================== -->
+		<header class="site-header" role="banner">
+			<div class="header-top">
+				<div class="container">
+					<div class="slogan">
+						Website chia sẻ  thông tin về trà lớn nhất hiện nay
+					</div>
+					<!-- <div class="signIn">
+						<i class="far fa-user"></i>
+						<a>Đăng ký/ Đăng nhập</a>
+					</div> -->
+					
+				</div>
+			</div>
+			
+			<!-- NAVBAR
+			================================================== -->
+			<div class="fl-allNav-full">
+			<div class="container fl-allNav">
+				
+				<nav class="navbar navbar-expand-lg navbar-light fl-nav ">
+					<a class="navbar-brand" href="index.html">
+						<img class="logoImg" src="assets/img/logo@2x.png" alt="hoa cuc vang logo">
+					</a>
+					
+					
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ml-auto nav-custom">
+							<li class="nav-item active">
+								<a class="nav-link" href="tra.html">TRÀ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="health.html">SỨC KHỎE</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="recipe.html">CÔNG THỨC</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="review.html">ĐÁNH GIÁ</a>
+							</li>
+							<button class="btn btn-login mb-display" type="submit">Login</button>
+						</ul>
+					</div>
+					<div id="search-icon" class="b-nav-search_icon">
+						<img src="assets/img/close.svg" width="20"  alt="" class="b-nav-search_close-icon">
+						<img src="assets/img/search.svg" width="20" id="search-icon-open"  alt="" class="b-nav-search_open-icon" >
+					</div>
+					<div class="login-menu">
+					<button class="btn btn-login btn-dk" type="submit">Login</button> 
+					</div>
+					
+					<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span> </span>
+						<span> </span>
+						<span> </span>
+					</button>
+				</nav>
+				</div>
+			</div>
+				<div class="b-nav-search_wrap" id="searchBox">
+					<div class="b-nav-search_inner">
+					<form  id="search-component" class="b-nav-search_component w-form">
+						<input type="search" class="b-nav-search_input w-input" maxlength="256" name="query" placeholder="Tìm kiếm thông tin về trà nào..."
+						id="search-2" required="">
+						<input type="submit" value=" " class="b-nav-search_button cc-light w-button"></form>
+				  </div>
+				</div>
+				</div>
+				
+			</header>
+		
+			<!-- HERO
+			================================================== -->
+			<section id="hero" class="list-view">
+				<div class="container listTop">
+				<div class="banner_hero">
+					
+					<h1>Sức khỏe <span>của bạn</span></h1>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Sức khỏe của bạn</a></li>
+						
+					  </ul>
+					
+				</div>
+				<div class="TopImage">
+					<img href="#" src="assets/img/thumb6.jpg" alt="">
+				</div>
+			</div>
+			</section>
+
+
+<section id="listView">
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="filter-row ">
+		<div class="filter-ele">
+			<div>
+				<!-- <label>Sắp xếp theo:</label> -->
+				<select class="form-control" ">
+					<option selected="" value="">Mới nhất</option>
+					<option value="">Phổ biến nhất</option>
+					<option value="">A-Z</option>
+				</select>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="col-12 " id="#life">
+		<div class="content-list row">
+			
+	
+		<div class="col-sm-6 postslide">
+			<div class="imgContainer">
+				<a href="detail.html"> <img href="detail.html" src="assets/img/thumb6.png" alt=""></a>
+			</div>
+			<div class="detailPost">
+				
+				<div class="title">
+					<div class="date">12.03.2020</div>
+					<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+					<div class="description">Xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+					<div class="read-divider"><i class="ti-timer"></i> 10 phút để đọc</div>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col-sm-6 postslide">
+				<div class="imgContainer">
+					<a href="detail.html"> <img href="detail.html" src="assets/img/thumb3.png" alt=""></a>
+				</div>
+				<div class="detailPost">
+					
+					<div class="title">
+						<div class="date">12.03.2020</div>
+						<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+						<div class="description">Cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+						<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+					</div>
+					
+				</div>
+				</div>
+				<div class="col-sm-6 postslide">
+					<div class="imgContainer">
+						<a href="detail.html"> <img href="detail.html" src="assets/img/Tea_Cloud.gif" alt=""></a>
+					</div>
+					<div class="detailPost">
+						
+						<div class="title">
+							<div class="date">12.03.2020</div>
+							<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+							<div class="description">Xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+							<div class="read-divider"><i class="ti-timer"></i> 10 phút để đọc</div>
+						</div>
+						
+					</div>
+					</div>
+					<div class="col-sm-6 postslide">
+						<div class="imgContainer">
+							<a href="detail.html"> <img href="detail.html" src="assets/img/thumb7.png" alt=""></a>
+						</div>
+						<div class="detailPost">
+							
+							<div class="title">
+								<div class="date">12.03.2020</div>
+								<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+								<div class="description">PES bắt tay với ông trùm làng game thế giới, quyết tâm "khô máu" với FIFA</div>
+								<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+							</div>
+							
+						</div>
+						</div>
+						<div class="col-sm-6 postslide">
+							<div class="imgContainer">
+								<a href="detail.html"> <img href="detail.html" src="assets/img/banner_health.png" alt=""></a>
+							</div>
+							<div class="detailPost">
+								
+								<div class="title">
+									<div class="date">12.03.2020</div>
+									<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+									<div class="description">Cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+									<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+								</div>
+								
+							</div>
+							</div>
+							<div class="col-sm-6 postslide">
+								<div class="imgContainer">
+									<a href="detail.html"> <img href="detail.html" src="assets/img/thumb11.png" alt=""></a>
+								</div>
+								<div class="detailPost">
+									
+									<div class="title">
+										<div class="date">12.03.2020</div>
+										<a href="detail.html"><h3 >Cách chọn phối màu phim và những điều bạn nên biết</h3></a>
+										<div class="description">Xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+										<div class="read-divider"><i class="ti-timer"></i> 10 phút để đọc</div>
+									</div>
+									
+								</div>
+								</div>
+								<div class="col-sm-6 postslide">
+									<div class="imgContainer">
+										<a href="detail.html"> <img href="#" src="assets/img/1ff3b307c32936a6ca4c7769cf44148e.gif" alt=""></a>
+									</div>
+									<div class="detailPost">
+										
+										<div class="title">
+											<div class="date">12.03.2020</div>
+											<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+											<div class="description">Tranh cãi việc SM thay đổi hình đại diện cho fandom "gà nhà": Người khen ngợi, kẻ chế giễu "nhìn như huy hiệu bóng đá"</div>
+											<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+										</div>
+										
+									</div>
+									</div>
+									<div class="col-sm-6 postslide">
+										<div class="imgContainer">
+											<a href="detail.html"> <img href="detail.html" src="assets/img/Banner3.png" alt=""></a>
+										</div>
+										<div class="detailPost">
+											
+											<div class="title">
+												<div class="date">12.03.2020</div>
+												<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+												<div class="description">Cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+												<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+											</div>
+											
+										</div>
+										</div>
+										<div class="col-sm-6 postslide">
+											<div class="imgContainer">
+												<a href="detail.html"> <img href="detail.html" src="assets/img/post3.png" alt=""></a>
+											</div>
+											<div class="detailPost">
+												
+												<div class="title">
+													<div class="date">12.03.2020</div>
+													<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+													<div class="description">Cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+													<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+												</div>
+												
+											</div>
+											</div>
+											<div class="col-sm-6 postslide">
+												<div class="imgContainer">
+													<a href="detail.html"> <img href="detail.html" src="assets/img/post1.png" alt=""></a>
+												</div>
+												<div class="detailPost">
+													
+													<div class="title">
+														<div class="date">12.03.2020</div>
+														<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
+														<div class="description">Cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+														<div class="read-divider"><i class="ti-timer"></i> 4 phút để đọc</div>
+													</div>
+													
+												</div>
+												</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+</section>
+
+
+
+
+			
+<!-- FOOTER
+================================================== -->
+<footer>
+<div class="footer_top">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<h1>Tham gia<span> cộng đồng</span></h1>
+			<p class="lead">Một khi đã tham gia vào Project Sugar, trái tim bạn sẽ luôn đồng hành cùng những giá trị Sugar mong muốn mang tới ...</p>
+		</div>
+		<div class="col-sm-8">
+			<div class="container">
+				<div class="row form-footer">
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Tên của bạn*" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Your Email *" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Số điện thoại" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Link facebook" value="" />
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<textarea id="txtArea" class="form-control" placeholder="Giới thiệu về bản thân trong 300 từ" value="yourself" rows="10" cols="70"></textarea>
+						</div>
+					</div>
+					<input type="submit" class="seeMore btnRegister"  value="Than gia ngay"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="footer_bot">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="quote_text">
+				<p>Hôm nay là một ngày hay hay, với tách trà trên tay, ta cùng thổi giấc mơ bay bay…<span>Cùng chia sẻ với Hiên Cúc Vàng tại các kênh thông tin này ngay</span></p>
+			</div>
+			<div class="social">
+				<div class="social-ico facebook-ico"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+				<div class="social-ico insta-ico"><a href="#"><i class="fab fa-instagram"></i></a></div>
+				<div class="social-ico youtube-ico"><a href="#"><i class="fab fa-youtube"></i></a></div>
+					<div class="social-ico twitter-ico"><a href="#"><i class="fab fa-twitter"></i></a></div>
+			</div>
+			<div class="email-info">
+
+			<i aria-hidden="true" class="far fa-envelope icon_color"></i><span> vitratuhoa@mail.com</span>
+</div>
+		</div>
+		
+		
+		</div><!-- container -->
+		<div class="menu-footer">
+			<ul>
+				<li ><a href="#">Liên hệ quảng cáo</a></li>
+				<li><a href="#"> Chính sách bảo mật</a> </li>
+				<li><a href="#">Quy định sử dụng</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</footer>
+<!-- MODAL
+================================================== -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery-3.5.1.slim.min.js"></script> -->
+<script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+new Glide('.banner_hero',{
+	perView: 1,
+	type:'carousel',
+	dots:'#dots',
+	variableWidth: true,
+	// focusAt: 'center',
+	breakpoints:{
+		800:{
+			perView:1
+		}
+	}
+	
+}).mount();
+</script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container', {
+slidesPerView: 6,
+// centeredSlides: true,
+spaceBetween: 30,
+
+// loopAdditionalSlides: 100,
+// loop: true,
+// fadeEffect: { crossFade: true },
+grabCursor: true,
+// effect: "fade"
+// loopFillGroupWithBlank: true,
+navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+ 
+},
+      breakpoints: {
+      320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    640: {
+slidesPerView: 6,
+spaceBetween: 20
+},
+},
+
+});
+</script>
+<script>
+var swiper = new Swiper('.swiper-container.small-slider', {
+slidesPerView: 5,
+// centeredSlides: true,
+spaceBetween: 30,
+loopAdditionalSlides: 100,
+loop: true,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+ autoplay: {
+    delay: 3000,
+  },
+breakpoints: {
+320: {
+slidesPerView: 2,
+spaceBetween: 20
+},
+640: {
+slidesPerView: 5,
+spaceBetween: 20
+},
+},
+});
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<!-- <link rel="icon" href="img/favicon.ico"> -->
+		<link rel="icon" href="assets/img/favicon.ico">
 		
 		<title>Hiên Cúc Vàng</title>
 		
@@ -19,6 +19,7 @@
 		<script src="assets/js/allfontawesome.min.js"></script>
 		<!-- Custom CSS -->
 		<link href="assets/css/custom.css" rel="stylesheet">
+		<link href="assets/css/themify-icons.css" rel="stylesheet">
 		<link href="assets/css/customsas.css" rel="stylesheet">
 
 		<link href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css" rel="stylesheet">
@@ -44,53 +45,70 @@
 					<div class="slogan">
 						Website chia sẻ  thông tin về trà lớn nhất hiện nay
 					</div>
-					<div class="search">
-						<form class="search-form" role="" action="" method="get">
-							
-							<div class="search-form__container">
-								<div class="search-form__icon">
-									<i class="fas fa-search icon_color" aria-hidden="true"></i>
-									
-								</div>
-								<input placeholder="Tìm kiếm..." class="" type="search" name="s" title="Search" value="">
-							</div>
-						</form>
-					</div>
+					<!-- <div class="signIn">
+						<i class="far fa-user"></i>
+						<a>Đăng ký/ Đăng nhập</a>
+					</div> -->
+					
 				</div>
 			</div>
 			
 			<!-- NAVBAR
 			================================================== -->
-			<div class="container">
-				<nav class="navbar navbar-expand-lg navbar-light ">
-					<a class="navbar-brand" href="#">
+			<div class="fl-allNav-full">
+			<div class="container fl-allNav">
+				
+				<nav class="navbar navbar-expand-lg navbar-light fl-nav ">
+					<a class="navbar-brand" href="index.html">
 						<img class="logoImg" src="assets/img/logo@2x.png" alt="hoa cuc vang logo">
 					</a>
+					
+					
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ml-auto nav-custom">
+							<li class="nav-item active">
+								<a class="nav-link" href="tra.html">TRÀ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="health.html">SỨC KHỎE</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="recipe.html">CÔNG THỨC</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="review.html">ĐÁNH GIÁ</a>
+							</li>
+							<button class="btn btn-login mb-display" type="submit">Login</button>
+						</ul>
+					</div>
+					<div id="search-icon" class="b-nav-search_icon">
+						<img src="assets/img/close.svg" width="20"  alt="" class="b-nav-search_close-icon">
+						<img src="assets/img/search.svg" width="20" id="search-icon-open"  alt="" class="b-nav-search_open-icon" >
+					</div>
+					<div class="login-menu">
+					<button class="btn btn-login btn-dk" type="submit">Login</button> 
+					</div>
+					
 					<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 						<span> </span>
 						<span> </span>
 						<span> </span>
 					</button>
-					
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav ml-auto nav-custom">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">TRÀ</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">SỨC KHỎE</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">CÔNG THỨC</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">ĐÁNH GIÁ</a>
-							</li>
-							<button class="btn btn-login" type="submit">Login</button>
-						</ul>
-					</div>
 				</nav>
+				</div>
+			</div>
+				<div class="b-nav-search_wrap" id="searchBox">
+					<div class="b-nav-search_inner">
+					<form  id="search-component" class="b-nav-search_component w-form">
+						<input type="search" class="b-nav-search_input w-input" maxlength="256" name="query" placeholder="Tìm kiếm thông tin về trà nào..."
+						id="search-2" required="">
+						<input type="submit" value=" " class="b-nav-search_button cc-light w-button"></form>
+				  </div>
+				</div>
+				</div>
+				
 			</header>
+		
 			<!-- HERO
 			================================================== -->
 			<section id="hero" data-type="background" data-speed="5">
@@ -121,7 +139,7 @@
 					<div class="swiper-wrapper">
 						<!-- Slides -->
 						<div class="swiper-slide"><div class="imgContainer">
-							<a href="#"> <img href="#" src="assets/img/post5.png" alt=""></a>
+							<a href="#"> <img href="#" src="assets/img/thumb7.png" alt=""></a>
 						</div>
 						<div class="detailPost">
 							<div class="date">12.03.2020</div>
@@ -133,12 +151,12 @@
 						</div>
 					</div>
 					<div class="swiper-slide"><div class="imgContainer">
-						<a href="#"> <img href="#" src="assets/img/post3.png" alt=""></a>
+						<a href="#"> <img href="#" src="assets/img/thumb11.png" alt=""></a>
 					</div>
 					<div class="detailPost">
 						<div class="date">12.03.2020</div>
 						<div class="title">
-							<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+							<a href="#"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
 						</div>
 						<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
 						
@@ -150,14 +168,14 @@
 				<div class="detailPost">
 					<div class="date">12.03.2020</div>
 					<div class="title">
-						<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+						<a href="#"><h3 >Tin vui cho những ai hay uống trà</h3></a>
 					</div>
 					<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
 					
 				</div>
 			</div>
 			<div class="swiper-slide"><div class="imgContainer">
-				<a href="#"> <img href="#" src="assets/img/post4.png" alt=""></a>
+				<a href="#"> <img href="#" src="assets/img/thumb3.png" alt=""></a>
 			</div>
 			<div class="detailPost">
 				<div class="date">12.03.2020</div>
@@ -169,12 +187,12 @@
 			</div>
 		</div>
 		<div class="swiper-slide"><div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post1.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb8.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			<div class="date">12.03.2020</div>
 			<div class="title">
-				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				<a href="#"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
 			</div>
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
 			
@@ -230,7 +248,7 @@
 <div class="inner-header">
 	<h1>Trà & <span>Cuộc sống</span></h1>
 	<div class="seeMore">
-		<a href="#" ><span>Xem thêm</span></a>
+		<a href="tra.html" ><span>Xem thêm</span></a>
 	</div>
 </div>
 <div class="row">
@@ -245,12 +263,14 @@
 				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
 			</div>
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
 		</div>
+		
 	</div>
 	<div class=" col-sm-6 postslide">
 		<div class="date">12.03.2020</div>
 		<div class="imgContainer">
-			<a href="#"> <img   src="assets/img/post1.png" alt=""></a>
+			<a href="#"> <img   src="assets/img/thumb6.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
@@ -259,13 +279,16 @@
 					<h3 href="#">Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3>
 				</a>
 			</div>
+			
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+			<div class="read-divider"><i class="ti-timer"></i> 12 phút để đọc</div>
 		</div>
+		
 	</div>
 
 </div>
 <div class="seeMore btn-mb">
-		<a href="#" ><span>Xem thêm</span></a>
+		<a href="health.html" ><span>Xem thêm</span></a>
 	</div>
 </div>
 </div>
@@ -277,7 +300,7 @@
 <div class="col-sm-6 col-12">
 	<div class="health-banner">
 		
-			<a href="#"> <img href="#" src="assets/img/banner_health.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/bannertext.png" alt=""></a>
 		
 		
 </div>
@@ -286,7 +309,7 @@
 	<div class="postslide">
 		<div class="imgContainer">
 			
-			<a href="#"> <img href="#" src="assets/img/post3.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb11.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			<div class="date">12.03.2020</div>
@@ -294,7 +317,10 @@
 				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
 			</div>
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+		
+			<div class="read-divider"><i class="ti-timer"></i> 11 phút để đọc</div>
 		</div>
+
 	</div>
 </div>
 <div class="col-sm-3 col-6">
@@ -305,15 +331,17 @@
 		<div class="detailPost">
 			<div class="date">12.03.2020</div>
 			<div class="title">
-				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+				<a href="#"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
 			</div>
 			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
+			<div class="read-divider"><i class="ti-timer"></i> 5 phút để đọc</div>
 		</div>
+		
 	</div>
 </div>
 </div>
 <div class="seeMore">
-<a href="#" ><span>Xem thêm</span></a>
+<a href="health.html" ><span>Xem thêm</span></a>
 </div>
 </div>
 </section>
@@ -325,7 +353,7 @@
 	<h1>Công thức <span>cho bạn</span></h1>
 	<p class="lead">Chuyên mục Công thức nấu ăn sẽ là sổ tay dạy nấu ăn bổ ích, đồng hành cùng người nội trợ, mang đến những món ăn thơm ngon, bổ dưỡng cho bữa ăn gia ...</p>
 	<div class="seeMore">
-		<a href="#" ><span>Xem thêm</span></a>
+		<a href="recipe.html" ><span>Xem thêm</span></a>
 	</div>
 	<div class="recipe-inner">
 	</div>
@@ -335,15 +363,18 @@
 <div class="col-sm-6">
 	<div class="postslide left">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post5.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb2.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
 			<div class="title">
 				<a href="#"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
+
 			</div>
+			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
 			
 		</div>
+	
 	</div>
 </div>
 <div class="col-sm-6">
@@ -351,29 +382,31 @@
 		<div class="col-sm-12 col-6">
 	<div class="postslide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post2.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb3.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
 			<div class="title">
 				<a href="#"><h3 >Tin vui cho những ai hay uống trà</h3></a>
 			</div>
-			
+			<div class="read-divider"><i class="ti-timer"></i> 5 phút để đọc</div>
 		</div>
+	
 	</div>
 </div>
 <div class="col-sm-12 col-6">
 	<div class="postslide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post1.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb8.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
 			<div class="title">
 				<a href="#"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
 			</div>
-			
+			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
 		</div>
+	
 	</div>
 	
 	</div>
@@ -394,7 +427,7 @@
 <div class="inner-header">
 	<h1>Đánh giá <span>về trà</span></h1>
 	<div class="seeMore">
-		<a href="#" ><span>Xem thêm</span></a>
+		<a href="review.html" ><span>Xem thêm</span></a>
 	</div>
 </div>
 </div>
@@ -402,7 +435,7 @@
 <div class="swiper-wrapper">
 	<div class="swiper-slide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post1.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb11.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
@@ -426,7 +459,7 @@
 	</div>
 	<div class="swiper-slide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post2.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/post6.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
@@ -438,7 +471,7 @@
 	</div>
 	<div class="swiper-slide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post3.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb8.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
@@ -450,7 +483,7 @@
 	</div>
 	<div class="swiper-slide">
 		<div class="imgContainer">
-			<a href="#"> <img href="#" src="assets/img/post2.png" alt=""></a>
+			<a href="#"> <img href="#" src="assets/img/thumb5.png" alt=""></a>
 		</div>
 		<div class="detailPost">
 			

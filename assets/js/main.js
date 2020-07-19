@@ -60,3 +60,28 @@ function scrollFunction() {
     // document.getElementById("logo").style.fontSize = "35px";
   }
 }
+
+var image_search =  document.getElementById("search-icon-open");
+var search_icon = document.getElementById('search-icon');
+var search_box = document.getElementById('searchBox');
+search_icon.addEventListener('click', function() {
+ 
+  search_icon.classList.toggle('open_ico');
+  search_box.classList.toggle('openSearch');
+
+  }
+ );
+
+
+ $(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.b-post__hero-wrap').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return  (elementHeight - scrollTop) / elementHeight;
+    }
+  });
+});
+
+
