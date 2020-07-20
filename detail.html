@@ -79,7 +79,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="review.html">ĐÁNH GIÁ</a>
 							</li>
-							<button class="btn btn-login mb-display" type="submit">Login</button>
+							<button class="btn btn-login mb-display" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button>
 						</ul>
 					</div>
 					<div id="search-icon" class="b-nav-search_icon">
@@ -87,7 +87,7 @@
 						<img src="assets/img/search.svg" width="20" id="search-icon-open"  alt="" class="b-nav-search_open-icon" >
 					</div>
 					<div class="login-menu">
-					<button class="btn btn-login btn-dk" type="submit">Login</button> 
+					<button class="btn btn-login btn-dk" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button> 
 					</div>
 					
 					<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,7 +109,7 @@
 				</div>
 				
 			</header>
-		
+			
 			<!-- HERO
 			================================================== -->
 			<section id="hero" class="detailView">
@@ -173,6 +173,7 @@
 			<p>Khi chuyển đến nước Anh chung sống với vua Charles, nàng đã mang theo trà trong hành lý của mình. Một truyền thuyết thú vị kể rằng những thùng trà nàng mang theo được đánh dấu là Transporte de Ervas Aromaticas (theo tiếng Bồ Đào Nha có nghĩa là: vận chuyển thảo dược thơm), và viết tắt là T.E.A. Từ "trà" trong tiếng Anh hiện nay được gọi là "tea" có lẽ xuất phát từ nguyên nhân ấy. </p>
 			<img src="assets/img/thumb13.png" alt="">
 			<p>Thế nhưng, một số nhà ngôn ngữ học lại cho rằng chữ "tea" trong tiếng Anh bắt nguồn từ việc phiên âm từ chữ "trà" trong tiếng Hoa. Tuy câu chuyện này còn gây tranh cãi, nhưng một điều chắc chắn là vào thời điểm ấy, trà đã được dùng rộng rãi trong giới quý tộc Bồ Đào Nha, do nước này có mối buôn bán trực tiếp với Trung Quốc thông qua thuộc địa của mình là Macau.</p>
+			<blockquote>"Mỗi tuần, tôi có một ngày để làm hai việc tuyệt vời. Đó là, thứ nhất: làm thinh, thứ hai: không làm gì cả!"</blockquote>
 			<p><i>"Việc nàng thường uống trà khiến những người khác cũng uống. Các quý bà quý cô đua nhau học theo nàng, và đua trở thành thành phần thân cận với nàng."</i> Dần dần, những tầng lớp xã hội thấp hơn cũng thường xuyên uống trà, đưa trà trở thành thứ đồ uống phổ biến hơn.</p>
 		</article>
 
@@ -277,10 +278,37 @@
 
 
 </section>
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			
+<div class="form-login">
+	<div class="left">
 
+	</div>
+	<form action="" class="log-in" autocomplete="off">
+		<h4>Đăng nhập</span></h4>
+	  <p>Welcome back! Log in to your account to view today's clients:</p>
+	  <div class="floating-label">
+		  <input class="form-control" placeholder="Email" type="text" name="email" id="email" autocomplete="off">
+		  <!-- <label for="email">Email:</label> -->
+	  </div>
+	  <div class="floating-label">
+        <input class="form-control" placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+        <!-- <label for="password">Password:</label> -->
+	  </div>
+	  <p><a href="#">Quên mật khẩu?</a></p>
+	  <button class="btn-login">Đăng nhập</button>
+	</form>
+	</div>
 
-
-
+</div>
+</div>
+</div>
 			
 <!-- FOOTER
 ================================================== -->
@@ -360,6 +388,37 @@
 </footer>
 <!-- MODAL
 ================================================== -->
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			
+<div class="form-login">
+	<div class="left">
+
+	</div>
+	<form action="" class="log-in" autocomplete="off">
+		<h4>Đăng nhập</span></h4>
+	  <p>Welcome back! Log in to your account to view today's clients:</p>
+	  <div class="floating-label">
+		  <input class="form-control" placeholder="Email" type="text" name="email" id="email" autocomplete="off">
+		  <!-- <label for="email">Email:</label> -->
+	  </div>
+	  <div class="floating-label">
+        <input class="form-control" placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+        <!-- <label for="password">Password:</label> -->
+	  </div>
+	  <p><a href="#">Quên mật khẩu?</a></p>
+	  <button class="btn-login">Đăng nhập</button>
+	</form>
+	</div>
+
+</div>
+</div>
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -368,7 +427,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
+<!-- <script>
 new Glide('.banner_hero',{
 	perView: 1,
 	type:'carousel',
@@ -382,8 +441,19 @@ new Glide('.banner_hero',{
 	}
 	
 }).mount();
-</script>
+</script> -->
 <!-- Swiper JS -->
+<script>
+	// When the user scrolls the page, execute myFunction 
+	window.onscroll = function() {myFunction()};
+	
+	function myFunction() {
+	  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	  var scrolled = (winScroll / height) * 100;
+	  document.getElementById("myBar").style.width = scrolled + "%";
+	}
+	</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->
 <script>

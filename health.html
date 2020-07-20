@@ -78,7 +78,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="review.html">ĐÁNH GIÁ</a>
 							</li>
-							<button class="btn btn-login mb-display" type="submit">Login</button>
+							<button class="btn btn-login mb-display" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button>
 						</ul>
 					</div>
 					<div id="search-icon" class="b-nav-search_icon">
@@ -86,7 +86,7 @@
 						<img src="assets/img/search.svg" width="20" id="search-icon-open"  alt="" class="b-nav-search_open-icon" >
 					</div>
 					<div class="login-menu">
-					<button class="btn btn-login btn-dk" type="submit">Login</button> 
+					<button class="btn btn-login btn-dk" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button> 
 					</div>
 					
 					<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -393,6 +393,37 @@
 </footer>
 <!-- MODAL
 ================================================== -->
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			
+<div class="form-login">
+	<div class="left">
+
+	</div>
+	<form action="" class="log-in" autocomplete="off">
+		<h4>Đăng nhập</span></h4>
+	  <p>Welcome back! Log in to your account to view today's clients:</p>
+	  <div class="floating-label">
+		  <input class="form-control" placeholder="Email" type="text" name="email" id="email" autocomplete="off">
+		  <!-- <label for="email">Email:</label> -->
+	  </div>
+	  <div class="floating-label">
+        <input class="form-control" placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+        <!-- <label for="password">Password:</label> -->
+	  </div>
+	  <p><a href="#">Quên mật khẩu?</a></p>
+	  <button class="btn-login">Đăng nhập</button>
+	</form>
+	</div>
+
+</div>
+</div>
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

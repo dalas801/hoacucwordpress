@@ -437,7 +437,7 @@ position: relative;
 .detailView{
   .b-hero{
     @include flex();
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     min-height: 600px;
     padding: 0 50px 0 50px;
@@ -599,6 +599,16 @@ background-attachment: fixed;
 
 .cc-post{
   margin-bottom: 100px;
+  blockquote{
+    padding: 2em;
+    font-size: 1.7em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #69b178;
+    @media screen and (max-width: 568px){
+      padding: 1.4em;
+    }
+  }
 }
 .relate{
   h1{
@@ -629,15 +639,77 @@ background-attachment: fixed;
   }
 }
 
+.progress-container {
+  width: 100%;
+    height: 8px;
+    z-index: 666666;
+    
+    position: fixed;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #69b178 !important;
+  width: 0%;
+}
 
 
+$primary: rgb(182,157,230); 
 
+.form-login{
+  @include center-flex();
+  align-items: stretch;
+  @include flex();
+  form{
 
-
-
-
-
-
-
-
+    &.log-in{
+      background-color: white;
+      padding:4em 2em;
+     
+      p{
+        margin-bottom: 3em;
+      }
+      h4{
+        margin-bottom: 0.5em;
+        font-size: 2em;
+      }
+     
+    }
+    .form-control{
+      margin: 1.5em 0;
+    }
+    a{
+      color: #b1b1b1;
+      
+      &:hover 
+      {
+        color: #f5cb5c;
+      }
+    }
+  }
   
+  .left{
+    background-image: url(../img/thumb1.jpg);
+    width: 300px;
+    height: auto;
+    background-color: blue;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 568px){
+     display: none;
+    }
+  }
+}
+
+.modal-dialog {
+  margin-top: 100px !important;
+@media screen and  (min-width: 576px){
+    max-width: 600px !important;
+
+}
+}
+.close{
+  position: absolute;
+    right: 0.5em;
+}

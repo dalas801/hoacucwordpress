@@ -73,15 +73,33 @@ search_icon.addEventListener('click', function() {
  );
 
 
- $(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
+//  $(window).scroll(function() {
+//   var scrollTop = $(this).scrollTop();
 
-  $('.b-post__hero-wrap').css({
-    opacity: function() {
-      var elementHeight = $(this).height();
-      return  (elementHeight - scrollTop) / elementHeight;
-    }
-  });
+//   $('.b-post__hero-wrap').css({
+//     opacity: function() {
+//       var elementHeight = $(this).height();
+//       return  (elementHeight - scrollTop) / elementHeight;
+//     }
+//   });
+// });
+function myFunction() {
+    var elmnt = document.getElementById("hero");
+    var x = elmnt.scrollLeft;
+    var y = elmnt.scrollTop;
+    document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+  }
+
+/* // When the user scrolls the page, execute myFunction  */
+window.onscroll(function(){
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  console.lofg(document.getElementById("myBar").style.width = scrolled + "%");
 });
+
+
+
+
 
 

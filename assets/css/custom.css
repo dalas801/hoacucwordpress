@@ -23,7 +23,7 @@ h1 {
 	font-weight: 900!important;
 
 }
-h1,h2,h3,{
+h1,h2,h3{
 	font-family: 'Playfair Display', serif;
 }
 
@@ -407,13 +407,17 @@ img{
     margin-left: 1.5rem;
     padding:0.5rem 0.2rem;
 }
-.navbar .btn-login{
+.log-in .btn-login{
+  margin: 0;
+}
+.navbar .btn-login,.log-in .btn-login{
  
 	background-color: #69B178;
     
     color: white;
     font-weight: 500;
-    padding: 0.4em 2.1em;
+    padding: 0.5em 1.6em;
+    border-radius: 50px;
     border-radius: 20px;
     border: none;
      transition-duration: 0.4s;
@@ -435,6 +439,9 @@ img{
 .navbar-light .navbar-nav .nav-link{
     color: #000;
         position: relative;
+}
+.modal-content{
+  border: none !important;
 }
 .navbar-light .navbar-nav .nav-link:hover:before,.navbar-light .navbar-nav .active .nav-link:before{
 
@@ -832,9 +839,9 @@ padding: 4em 2em;
     border-radius: 10px;
     box-shadow: 0px 3px 62px #55420429;
 }
-.form-footer .form-control{
-  padding: 1.5em 1rem;
-    border-radius: 10px;
+ .form-control{
+  padding: 1.5em 1rem !important;
+    border-radius: 10px !important;
 }
 .social-ico{
      height: 45px;
@@ -953,6 +960,9 @@ margin: 0;
   }
   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.btnRegister{
     outline: none;
+  }
+  .modal-header{
+    padding: 1rem 0 !important;
   }
   
 /* ==== MEDIA QUERIES ==== */
@@ -1107,6 +1117,10 @@ display: block !important;
 }
 }
 @media screen and (max-width : 568px) {
+ 
+  b-post__hero-thumbnail{
+    margin-bottom: 1em;
+  }
   .b-post-bottom__author {
    
     flex-direction: column;
@@ -1155,7 +1169,7 @@ display: block !important;
     flex-wrap: wrap;
   }
   
-.btn-login{
+.btn-login.btn-dk{
   display: none;
 }
 .mb-display{
