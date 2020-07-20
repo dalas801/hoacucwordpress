@@ -1023,6 +1023,9 @@ button:focus {
 *:focus {
   outline: 0 !important;
 }
+.form-control{
+  height: calc(2em + .75rem + 2px);
+}
 /* ==== MEDIA QUERIES ==== */
 @media screen and (min-width : 1024px)  {
 	.navbar .btn-login{
@@ -1062,8 +1065,10 @@ button:focus {
     flex: 0 0 8em !important;
   }
   .content-list .postslide .imgContainer img{
-    border: 8px solid #FFFBE8 !important;
+    border: 8px solid #bcc8bf1f !important;
   }
+  
+  
   .list-view .banner_hero h1 {
     font-size: 2.5em ;
 }
@@ -1168,7 +1173,9 @@ display: block !important;
 h3{
   font-size: 1.2em !important;
 }
-
+.detailView .b-hero .b-post__hero-image{
+  background-attachment: scroll;
+}
 }
 @media screen and (max-width: 767px){
 .b-read__wrap img{

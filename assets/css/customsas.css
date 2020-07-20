@@ -735,7 +735,7 @@ ul.breadcrumb li + li:before {
 }
 
 .modal-dialog {
-  margin-top: 100px !important;
+  margin-top: 80px !important;
 }
 
 @media screen and (min-width: 576px) {
