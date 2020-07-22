@@ -51,14 +51,11 @@ function scrollFunction() {
     var templateDirectory = "<?php bloginfo('stylesheet_directory'); ?>";
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     site_header.classList.add("fixPosition");
-     .src=templateDirectory + "/assets/img/logoscroll.png";
-    // document.getElementById("navbar").style.padding = "30px 10px";
-    // document.getElementById("logo").style.fontSize = "25px";
+      document.querySelector(".logoImg").src=templateDirectory+ '/assets/img/logoscroll.png';
   } else {
-    
-    document.querySelector(".logoImg").src=templateDirectory +"/assets/img/logo@2x.png";
     site_header.classList.remove("fixPosition");
-    // document.getElementById("logo").style.fontSize = "35px";
+    document.querySelector(".logoImg").src=templateDirectory+ '/assets/img/logo@2x.png';
+   
   }
 }
 
@@ -84,20 +81,7 @@ search_icon.addEventListener('click', function() {
     }
   });
 });
-// function myFunction() {
-//     var elmnt = document.getElementById("hero");
-//     var x = elmnt.scrollLeft;
-//     var y = elmnt.scrollTop;
-//     document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
-//   }
 
-// /* // When the user scrolls the page, execute myFunction  */
-// window.onscroll(function(){
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   console.lofg(document.getElementById("myBar").style.width = scrolled + "%");
-// });
 
 
 
