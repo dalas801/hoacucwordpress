@@ -90,45 +90,49 @@ get_header();
 <div class="inner-header">
 	<h1>Trà & <span>Cuộc sống</span></h1>
 	<div class="seeMore">
-		<a href="tra.html" ><span>XEM THÊM</span></a>
+		<a href="<?php echo get_post_type_archive_link('tea') ?> "><span>XEM THÊM</span></a>
 	</div>
 </div>
 <div class="row">
-	<div class=" col-sm-6 postslide">
-		<div class="date">12.03.2020</div>
-		<div class="imgContainer">
-			<a href="detail.html"> <img src="assets/img/post4.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
-			</div>
-			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
-			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
-		</div>
-		
-	</div>
-	<div class=" col-sm-6 postslide">
-		<div class="date">12.03.2020</div>
-		<div class="imgContainer">
-			<a href="detail.html"> <img   src="assets/img/thumb6.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html">
-					<h3 href="detail.html">Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3>
-				</a>
-			</div>
-			
-			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
-			<div class="read-divider"><i class="ti-timer"></i> 12 phút để đọc</div>
-		</div>
-		
-	</div>
+<?php
 
+$args=array('post_type'=>'tea','posts_per_page' =>2,);
+$teaposts = new WP_Query($args);
+$time_reading= get_field( "reading-time" );
+$date=get_the_date( 'd.m.Y' );
+
+if($teaposts->have_posts()){
+while($teaposts->have_posts() ){
+	$teaposts->the_post();?>
+
+	<div class=" col-sm-6 postslide">
+		<div class="date"><?php echo $date; ?></div>
+		<div class="imgContainer">
+			<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+
+			<img src="<?php echo $url ?>" alt=""></a>
+		</div>
+		<div class="detailPost">
+			
+			<div class="title">
+				<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
+			</div>
+			<div class="description"><?php echo wp_trim_words(get_the_excerpt(),30);?></div>
+			<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
+		</div> 
+			
 </div>
+
+<?php
+ } }
+ ?>
+
+
+
+</div>	
+
+
 <div class="seeMore btn-mb">
 		<a href="health.html" ><span>XEM THÊM</span></a>
 	</div>
@@ -139,51 +143,53 @@ get_header();
 <div class="container">
 <h1>Sức khỏe <span>của bạn</span></h1>
 <div class="row health-inner">
+
+
 <div class="col-sm-6 col-12">
 	<div class="health-banner">
 		
-			<a href="detail.html"> <img  src="assets/img/bannertext.png" alt=""></a>
+			<a href="detail.html"> <img  src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bannertext.png" alt=""></a>
 		
 		
 </div>
 </div>
+<?php
+
+$args=array('post_type'=>'suc_khoe','posts_per_page' =>2,);
+$teaposts = new WP_Query($args);
+$time_reading= get_field( "reading-time" );
+$date=get_the_date( 'd.m.Y' );
+
+if($teaposts->have_posts()){
+while($teaposts->have_posts() ){
+	$teaposts->the_post();?>
+
 <div class="col-sm-3 col-6">
 	<div class="postslide">
 		<div class="imgContainer">
 			
-			<a href="detail.html"> <img  src="assets/img/thumb11.png" alt=""></a>
+		<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+
+			<img src="<?php echo $url ?>" alt=""></a>
 		</div>
 		<div class="detailPost">
-			<div class="date">12.03.2020</div>
+		<div class="date"><?php echo $date; ?></div>
 			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+			<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
 			</div>
-			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
-		
-			<div class="read-divider"><i class="ti-timer"></i> 11 phút để đọc</div>
+			<div class="description"><?php echo wp_trim_words(get_the_excerpt(),30);?></div>
+			<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
 		</div>
 
 	</div>
 </div>
-<div class="col-sm-3 col-6">
-	<div class="postslide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/1ff3b307c32936a6ca4c7769cf44148e.gif" alt=""></a>
-		</div>
-		<div class="detailPost">
-			<div class="date">12.03.2020</div>
-			<div class="title">
-				<a href="detail.html"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
-			</div>
-			<div class="description">Chọn trà theo đúng cung bậc cảm xúc sẽ giúp ích rất nhiều cho bạn trong việc xoa dịu tâm lí đấy!</div>
-			<div class="read-divider"><i class="ti-timer"></i> 5 phút để đọc</div>
-		</div>
-		
-	</div>
+<?php
+ } }?>
 </div>
 </div>
 <div class="seeMore">
-<a href="health.html" ><span>XEM THÊM</span></a>
+<a href="<?php echo get_post_type_archive_link('tea') ?>" ><span>XEM THÊM</span></a>
 </div>
 </div>
 </section>
@@ -202,58 +208,38 @@ get_header();
 </div>
 <div class="col-sm-8">
 	<div class="row">
+	<?php
+
+$args=array('post_type'=>'cuoc-song','posts_per_page' =>2,);
+$teaposts = new WP_Query($args);
+$time_reading= get_field( "reading-time" );
+
+if($teaposts->have_posts()){
+while($teaposts->have_posts() ){
+	$teaposts->the_post();?>
+
 <div class="col-sm-6">
 	<div class="postslide left">
 		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb2.png" alt=""></a>
+		<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+
+			<img src="<?php echo $url ?>" alt=""></a>
+		</div>
 		</div>
 		<div class="detailPost">
 			
 			<div class="title">
-				<a href="detail.html"><h3 >Người thông minh là phải biết chọn trà theo từng loại cảm xúc</h3></a>
+			<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
 
 			</div>
-			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
+			<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
 			
 		</div>
 	
 	</div>
 </div>
-<div class="col-sm-6">
-	<div class="row">
-		<div class="col-sm-12 col-6">
-	<div class="postslide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb3.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >Tin vui cho những ai hay uống trà</h3></a>
-			</div>
-			<div class="read-divider"><i class="ti-timer"></i> 5 phút để đọc</div>
-		</div>
-	
-	</div>
-</div>
-<div class="col-sm-12 col-6">
-	<div class="postslide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb8.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
-			</div>
-			<div class="read-divider"><i class="ti-timer"></i> 3 phút để đọc</div>
-		</div>
-	
-	</div>
-	
-	</div>
-</div>
-</div>
+<?php  } }?>
 </div>
 </div>
 </div>
@@ -275,78 +261,31 @@ get_header();
 </div>
 <div class="swiper-container small-slider">
 <div class="swiper-wrapper">
+<?php
+
+$args=array('post_type'=>'danh-gia','posts_per_page' =>2,);
+$teaposts = new WP_Query($args);
+$time_reading= get_field( "reading-time" );
+
+if($teaposts->have_posts()){
+while($teaposts->have_posts() ){
+	$teaposts->the_post();?>
 	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb11.png" alt=""></a>
+	<div class="imgContainer">
+		<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+
+			<img src="<?php echo $url ?>" alt=""></a>
 		</div>
 		<div class="detailPost">
 			
 			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
+			<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
 			</div>
 			
 		</div>
 	</div>
-	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img src="assets/img/Tea_Cloud.gif" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >Bộ sưu tập công thức trà khiến bạn “yêu đời” ngay tức thì</h3></a>
-			</div>
-			
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/post6.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
-			</div>
-			
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb8.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >Đúng là chẳng có gì dễ dàng, kể cả việc pha một ly trà và uống sao cho đúng cách</h3></a>
-			</div>
-			
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/thumb5.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >6 thứ lành mạnh nhất mà bạn nên thêm vào ly trà uống hàng ngày</h3></a>
-			</div>
-			
-		</div>
-	</div>
-	<div class="swiper-slide">
-		<div class="imgContainer">
-			<a href="detail.html"> <img  src="assets/img/post5.png" alt=""></a>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-				<a href="detail.html"><h3 >Trà tắc tự pha ngon lành chất lượng</h3></a>
-			</div>
-			
-		</div>
-	</div>
+	<?php  } }?>
 </div>
 <div class="swiper-pagination"></div>
 </div>

@@ -65,7 +65,7 @@
 			<div class="header-top">
 				<div class="container">
 					<div class="slogan">
-						Website chia sẻ  thông tin về trà lớn nhất hiện nay
+					<?php bloginfo('description'); ?>
 					</div>
 					<!-- <div class="signIn">
 						<i class="far fa-user"></i>
@@ -81,20 +81,28 @@
 			<div class="container fl-allNav">
 				
 				<nav class="navbar navbar-expand-lg navbar-light fl-nav ">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="<?php echo site_url(''); ?>">
 						<img class="logoImg" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo@2x.png" alt="hoa cuc vang logo">
 					</a>
 				
-					<?php
-						wp_nav_menu( array(
-							
-							'theme_location'	=> 'menu-1',
-							'container'			=> 'nav',
-							'container_class'	=> 'navbar-collapse collapse',
-							'menu_class'		=> 'navbar-nav ml-auto nav-custom'
-							
-						) );
-					?>
+					
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ml-auto nav-custom">
+							<li class="nav-item active">
+								<a class="nav-link" href="<?php echo get_post_type_archive_link('tea') ?> ">TRÀ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo get_post_type_archive_link('suc-khoe') ?> ">SỨC KHỎE</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo get_post_type_archive_link('cong-thuc') ?> ">CÔNG THỨC</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo get_post_type_archive_link('danh-gia') ?> ">ĐÁNH GIÁ</a>
+							</li>
+							<button class="btn btn-login mb-display" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button>
+						</ul>
+					</div>
 
 					<div id="search-icon" class="b-nav-search_icon">
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/close.svg" width="20"  alt="" class="b-nav-search_close-icon">

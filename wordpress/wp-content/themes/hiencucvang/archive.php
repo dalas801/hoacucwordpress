@@ -10,42 +10,93 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<section id="hero" class="list-view">
+				<div class="container listTop">
+				<div class="banner_hero">
+					
+					<h1>Trà & <span>cuộc sống</span></h1>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Trà & cuộc sống</a></li>
+						
+					  </ul>
+					
+				</div>
+				<div class="TopImage">
+					<img href="#" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/thumb13.png" alt="">
+				</div>
+			</div>
+			</section>
 
-		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+<section id="listView">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<div class="filter-row ">
+		<div class="filter-ele">
+			<div>
+				<!-- <label>Sắp xếp theo:</label> -->
+				<select class="form-control" ">
+					<option selected="" value="">Mới nhất</option>
+					<option value="">Phổ biến nhất</option>
+					<option value="">A-Z</option>
+				</select>
+			</div>
+		</div>
+		</div>
+	</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+	<div class="col-12 " id="#life">
+		<div class="content-list row">
+			
+	<?php 
+	$args=array('post_type'=>'tea');
+	$teaposts = new WP_Query($args);
+	$time_reading= get_field( "reading-time" );
+	$date=get_the_date( 'd.m.Y' );
+	
+	if($teaposts->have_posts()){
+	while($teaposts->have_posts() ){
+		$teaposts->the_post();?>
 
-			endwhile;
+		<div class="col-sm-6 postslide">
+		<div class="imgContainer">
+			<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
 
-			the_posts_navigation();
+			<img src="<?php echo $url ?>" alt=""></a>
+		</div>
+			<div class="detailPost">
+				
+			<div class="title">
+			<div class="date"><?php echo $date; ?></div>
+				<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
+			
+			<div class="description"><?php echo wp_trim_words(get_the_excerpt(),30);?></div>
+			<div class="read-divider"><i class="ti-timer"></i> <?php echo get_field( "reading-time" ); ?> phút để đọc</div>
+				
+			</div>
+			</div>
+							
+		</div>
+		<?php
+ } }
+ ?>
+	</div>	
+</div>
+	</div>
+	</div>
+	</div>
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+
+</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
