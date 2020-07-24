@@ -181,3 +181,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// function theme_body_classes( $classes ) {
+//     global $post;
+
+//     if( is_object( $post ) ) {
+//         $classes[] = $post->post_name;
+//         $classes[] = "{$post->post_type}-{$post->post_name}";
+//     }
+
+//     return $classes;
+// }
+// add_filter( 'body_class', 'theme_body_classes' );

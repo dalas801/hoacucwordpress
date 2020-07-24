@@ -89,16 +89,16 @@
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav ml-auto nav-custom">
 							<li class="nav-item active">
-								<a class="nav-link" href="<?php echo get_post_type_archive_link('tea') ?> ">TRÀ</a>
+								<a class="nav-link" href="<?php echo site_url('/tra') ?>  ">TRÀ</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_post_type_archive_link('suc-khoe') ?> ">SỨC KHỎE</a>
+								<a class="nav-link" href="<?php echo site_url('/suc-khoe') ?> ">SỨC KHỎE</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_post_type_archive_link('cong-thuc') ?> ">CÔNG THỨC</a>
+								<a class="nav-link" href="<?php echo site_url('/cong-thuc') ?> ">CÔNG THỨC</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?php echo get_post_type_archive_link('danh-gia') ?> ">ĐÁNH GIÁ</a>
+								<a class="nav-link" href="<?php echo site_url('/danh-gia') ?> ">ĐÁNH GIÁ</a>
 							</li>
 							<button class="btn btn-login mb-display" type="submit" data-toggle="modal" data-target="#modalRegisterForm">Đăng nhập</button>
 						</ul>

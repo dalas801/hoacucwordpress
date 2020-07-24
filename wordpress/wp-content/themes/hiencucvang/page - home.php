@@ -96,7 +96,7 @@ get_header();
 <div class="row">
 <?php
 
-$args=array('post_type'=>'tea','posts_per_page' =>2,);
+$args=array('post_type'=>'tra_cuoc_song','posts_per_page' =>2,);
 $teaposts = new WP_Query($args);
 $time_reading= get_field( "reading-time" );
 $date=get_the_date( 'd.m.Y' );
@@ -134,7 +134,7 @@ while($teaposts->have_posts() ){
 
 
 <div class="seeMore btn-mb">
-		<a href="health.html" ><span>XEM THÊM</span></a>
+		<a href="<?php echo get_post_type_archive_link('information') ?> "><span>XEM THÊM</span></a>
 	</div>
 </div>
 </div>
@@ -189,7 +189,7 @@ while($teaposts->have_posts() ){
 </div>
 </div>
 <div class="seeMore">
-<a href="<?php echo get_post_type_archive_link('tea') ?>" ><span>XEM THÊM</span></a>
+<a href="<?php echo get_post_type_archive_link('suc_khoe') ?>" ><span>XEM THÊM</span></a>
 </div>
 </div>
 </section>
@@ -210,36 +210,65 @@ while($teaposts->have_posts() ){
 	<div class="row">
 	<?php
 
-$args=array('post_type'=>'cuoc-song','posts_per_page' =>2,);
-$teaposts = new WP_Query($args);
-$time_reading= get_field( "reading-time" );
+			$args=array('post_type'=>'cong_thuc','posts_per_page' =>2,);
+				$teaposts = new WP_Query($args);
+				$time_reading= get_field( "reading-time" );
+				// $firstpost=$teaposts[0]->ID;
+				?>
+			<div class="col-sm-6">
+					<div class="postslide left">
+					<div class="imgContainer">
+					<a href="<?php the_permalink();?>">
+					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+
+					<img src="<?php echo $url ?>" alt=""></a>
+					</div>
+					</div>
+					<div class="detailPost">
+					
+					<div class="title">
+					<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
+
+					</div>
+					<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
+			
+			</div>
+	
+	</div>
+
+<div class="col-sm-6">
+<div class="row">
+<?php
 
 if($teaposts->have_posts()){
 while($teaposts->have_posts() ){
 	$teaposts->the_post();?>
 
-<div class="col-sm-6">
-	<div class="postslide left">
-		<div class="imgContainer">
-		<a href="<?php the_permalink();?>">
-			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
+				<div class="col-sm-12 col-6">
+					<div class="postslide">
+						<div class="imgContainer">
+							<a href="<?php the_permalink();?>">
+						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($teaposts->ID), 'thumbnail' ); ?>
 
-			<img src="<?php echo $url ?>" alt=""></a>
-		</div>
-		</div>
-		<div class="detailPost">
-			
-			<div class="title">
-			<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
+						<img src="<?php echo $url ?>" alt=""></a>
+						</div>
+					
+					<div class="detailPost">
+					
+						<div class="title">
+						<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
 
-			</div>
-			<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
+						</div>
+						<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
+					
+					</div>
 			
-		</div>
-	
-	</div>
+				</div>
 </div>
+	
 <?php  } }?>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -263,7 +292,7 @@ while($teaposts->have_posts() ){
 <div class="swiper-wrapper">
 <?php
 
-$args=array('post_type'=>'danh-gia','posts_per_page' =>2,);
+$args=array('post_type'=>'danh_gia','posts_per_page' =>6,);
 $teaposts = new WP_Query($args);
 $time_reading= get_field( "reading-time" );
 
