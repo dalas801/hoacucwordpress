@@ -14,11 +14,7 @@ get_header();
 				<div class="banner_hero">
 					
 					<h1>Trà & <span>cuộc sống</span></h1>
-					<ul class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Trà & cuộc sống</a></li>
-						
-					  </ul>
+					<?php the_breadcrumb(); ?>
 					
 				</div>
 				<div class="TopImage">

@@ -12,7 +12,7 @@
 $postUrl = 'http' . ( isset( $_SERVER['HTTPS'] ) ? 's' : '' ) . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 $date=get_the_date( 'd.m.Y' );
 $cat = get_the_category(); 
-echo $cat[0]->cat_name;
+
  
   $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 
@@ -42,9 +42,13 @@ echo $cat[0]->cat_name;
 							  <a href="#" class="b-post__details-wrap-cell cc-last ">
 								<div class="b-post__hero-detail-text"><?php  echo $cat[0]->cat_name; ?></div>
 							  </a>
+							  
 						</div>
+						
 						</div>
+						<?php the_breadcrumb(); ?>
 					</div>
+					
 					</div>
 				
 				
@@ -60,7 +64,7 @@ echo $cat[0]->cat_name;
 		
 		</section>
 
-
+		
 <main class="cc-post">
 <div class="b-sticky-share__wrap">
 	<div class="cc-sticky-share b-post-bottom__share cc-read">

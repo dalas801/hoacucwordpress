@@ -26,34 +26,12 @@
 		</div>
 		<div class="col-sm-8">
 			<div class="container">
-				<div class="row form-footer">
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Tên của bạn*" value="" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Your Email *" value="" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Số điện thoại" value="" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Link facebook" value="" />
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<textarea id="txtArea" class="form-control" placeholder="Giới thiệu về bản thân trong 300 từ" value="yourself" rows="5" cols="70"></textarea>
-						</div>
-					</div>
-					<input type="submit" class="seeMore btnRegister"  value="THAM GIA NGAY"/>
-				</div>
+				
+				<?php echo do_shortcode('[contact-form-7 id="160" title="contact footer"]'); ?>
+			
+</div>
+
+				
 			</div>
 		</div>
 	</div>

@@ -228,10 +228,17 @@
   opacity: 0.7;
 }
 
+.b-post__hero-wrap ul.breadcrumb {
+  color: white;
+  font-size: 0.8em;
+  margin-top: 2em;
+}
+
 ul.breadcrumb {
   padding: 0;
   list-style: none;
   background: unset;
+  font-size: 0.8em;
 }
 
 ul.breadcrumb li {
@@ -755,5 +762,47 @@ ul.breadcrumb li + li:before {
 .close {
   position: absolute;
   right: 0.5em;
+}
+
+.et_pb_button {
+  margin: 1em auto 0;
+  padding: 0.5em 1em;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  border: 2px solid #69B178;
+  background-color: white;
+  font-weight: 400;
+}
+
+.number-492, .wpcf7-text, .wpcf7-email, .wpcf7-textarea {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.wpcf7-textarea {
+  height: auto;
+}
+
+.wpcf7-form-control-wrap {
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=customsas.css.map */

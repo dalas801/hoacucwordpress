@@ -879,13 +879,15 @@ content: "";
     background-color: white;
 
 }
-.btnRegister:hover{
+.btnRegister:hover,.et_pb_button:hover{
+
   color: white;
   background-color:#69B178;
 }
 
 .form-footer{
 padding: 4em 2em;
+justify-content: center;
     background-color: white;
    
 }
@@ -904,6 +906,7 @@ padding: 4em 2em;
     justify-content: center;
     align-items: center;
 }
+
 .email-info span{
   box-shadow: 0 -10px 0 0 #ffeec0 inset;
 }
@@ -1038,8 +1041,8 @@ button:focus {
 
 }
 .glide--swipeable{
-  margin-left: 30px;
-    margin-right: 30px;
+  /* margin-left: 30px;
+    margin-right: 30px; */
 }
 /* ==== MEDIA QUERIES ==== */
 @media screen and (min-width : 1024px)  {
@@ -1294,6 +1297,7 @@ display: block;
   }
   .form-footer {
     padding: 3em 1em;
+    justify-content: center;
 }
 
   

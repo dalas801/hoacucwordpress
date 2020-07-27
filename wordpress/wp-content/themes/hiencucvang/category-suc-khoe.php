@@ -14,15 +14,11 @@ get_header();
 				<div class="banner_hero">
 					
 					<h1>Sức khỏe <span>của bạn</span></h1>
-					<ul class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Trà & cuộc sống</a></li>
-						
-					  </ul>
+					<?php the_breadcrumb(); ?>
 					
 				</div>
 				<div class="TopImage">
-					<img href="#" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/thumb13.png" alt="">
+					<img href="#" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/thumb6.jpg" alt="">
 				</div>
 			</div>
 			</section>
