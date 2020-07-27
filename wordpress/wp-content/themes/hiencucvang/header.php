@@ -36,9 +36,10 @@
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome/css/all.min.css" rel="stylesheet">
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/allfontawesome.min.js"></script>
 		<!-- Custom CSS -->
+		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/customsas.css" rel="stylesheet">
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/custom.css" rel="stylesheet">
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/themify-icons.css" rel="stylesheet">
-		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/customsas.css" rel="stylesheet">
+		
 
 		<link href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css" rel="stylesheet">
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -88,7 +89,7 @@
 					
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav ml-auto nav-custom">
-							<li class="nav-item active">
+							<li class="nav-item">
 								<a class="nav-link" href="<?php echo site_url('/tra') ?>  ">TRÀ</a>
 							</li>
 							<li class="nav-item">
@@ -122,10 +123,7 @@
 			</div>
 				<div class="b-nav-search_wrap" id="searchBox">
 					<div class="b-nav-search_inner">
-					<form  id="search-component" class="b-nav-search_component w-form">
-						<input type="search" class="b-nav-search_input w-input" maxlength="256" name="query" placeholder="Tìm kiếm thông tin về trà nào..."
-						id="search-2" required="">
-						<input type="submit" value=" " class="b-nav-search_button cc-light w-button"></form>
+					<?php get_search_form(); ?>
 				  </div>
 				</div>
 				</div>

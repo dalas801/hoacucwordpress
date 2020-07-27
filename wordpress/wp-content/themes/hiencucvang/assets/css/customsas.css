@@ -500,12 +500,19 @@ ul.breadcrumb li + li:before {
   width: 892px;
 }
 
+.b-read__wrap figcaption {
+  font-style: italic;
+  font-weight: 400;
+  color: #b6b5b4;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
 .b-read__wrap img {
   min-width: 842px;
   width: 100%;
   position: relative;
   left: -75px;
-  margin: 64px 0;
   width: 100%;
   max-width: 100%;
   text-align: center;
@@ -513,6 +520,7 @@ ul.breadcrumb li + li:before {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  height: auto;
 }
 
 .b-read__wrap p {

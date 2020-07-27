@@ -192,3 +192,44 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 //     return $classes;
 // }
 // add_filter( 'body_class', 'theme_body_classes' );
+
+
+
+// add_filter( "wpo_custom_product_search", function($results,$query_args,$term) {
+// 	global $wpdb;
+// 	$term = esc_sql($wpdb->esc_like($term));
+// 	$results = $wpdb->get_col("SELECT ID FROM $wpdb->posts WHERE post_type='post' AND post_status='publish' AND post_title LIKE '%{$term}%'  
+// 							  OR ID IN (SELECT post_id FROM $wpdb->postmeta WHERE meta_key='_sku' AND meta_value LIKE '%{$term}%' )
+// 							  ORDER BY post_title LIMIT 25");
+// 	return $results;
+//    },10,3);
+
+function search_by_title_only($search, &$query){
+	global $wpdb;
+	if(empty($search)) {
+		return $search;
+	}
+	$q = $query->query_vars;
+	//var_dump($query);
+	$n = !empty($q['exact']) ? '' : '%';
+	$search =
+	$and = '';
+	foreach ((array)$q['search_terms'] as $term) {
+		$term = esc_sql($wpdb->esc_like($term));
+		$search .= "{$and}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}')";
+		$and = ' AND ';
+	}
+	if (!empty($search)) {
+		$search = " AND ({$search}) ";
+	}
+	//var_dump($wp_query);
+	//var_dump($wp_query);
+	return $search;
+}
+add_filter('posts_search', 'search_by_title_only', 999, 2);
+//cai nay de show sql
+//add_filter( 'posts_request', 'var_dump_request' );
+function var_dump_request($sql) {
+    var_dump($sql);
+    return $sql;
+}

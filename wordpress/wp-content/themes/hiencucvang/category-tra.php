@@ -1,12 +1,14 @@
 <?php
-/*
-Template Name: tra
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package hiencucvang
  */
 
 get_header();
 ?>
-<?php $args=array('post_type'=>'tra_cuoc_song'); ?>
-
 <section id="hero" class="list-view">
 				<div class="container listTop">
 				<div class="banner_hero">
@@ -20,16 +22,16 @@ get_header();
 					
 				</div>
 				<div class="TopImage">
-					<img href="#" src="assets/img/thumb13.png" alt="">
+					<img href="#" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/thumb13.png" alt="">
 				</div>
 			</div>
 			</section>
 
 
+			<?php include(locate_template('template-parts/content-listview.php')); ?>
 
+	</main><!-- #main -->
 
-<?php include(locate_template('template-parts/content-listview.php')); ?>
+<?php
 
-	
-
-<?php get_footer(); ?>
+get_footer();

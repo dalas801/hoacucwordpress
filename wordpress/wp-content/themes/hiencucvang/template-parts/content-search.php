@@ -9,27 +9,25 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			hiencucvang_posted_on();
-			hiencucvang_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php hiencucvang_post_thumbnail(); ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+<div class=" col-sm-6 postslide">
+<div class="imgContainer">
+			<a href="<?php the_permalink();?>">
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($catquery->ID), 'thumbnail' ); ?>
 
-	<footer class="entry-footer">
-		<?php hiencucvang_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+			<img src="<?php echo $url ?>" alt=""></a>
+		</div>
+		<div class="detailPost">
+			
+			<div class="title">
+			<div class="date"><?php echo $date; ?></div>
+				<a href="<?php the_permalink();?>"><h3 ><?php the_title();?></h3></a>
+			</div>
+			<div class="description"><?php echo wp_trim_words(get_the_excerpt(),30);?></div>
+			<div class="read-divider"><i class="ti-timer"></i> <?php echo  get_field( "reading-time" ); ?> phút để đọc</div>
+		</div> 
+</div>
+
+
