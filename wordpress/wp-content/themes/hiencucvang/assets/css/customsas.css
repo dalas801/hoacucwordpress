@@ -518,8 +518,14 @@ ul.breadcrumb li + li:before {
 
 .b-read__wrap {
   padding: 0 100px;
-  width: 892px;
-}
+  width: 892px;}
+  .b-read__wrap h4{
+    margin: 1em 0;
+    line-height: 2em;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+  }
+
 
 .b-read__wrap figcaption {
   font-style: italic;
@@ -681,7 +687,7 @@ ul.breadcrumb li + li:before {
 }
 
 .cc-post blockquote {
-  padding: 2em;
+  padding: 1em 2em;
   font-size: 1.7em;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -816,7 +822,7 @@ ul.breadcrumb li + li:before {
   right: 0.5em;
 }
 
-.et_pb_button {
+.wpcf7-submit {
   margin: 1em auto 0;
   padding: 0.5em 1em;
   -webkit-transition-duration: 0.4s;

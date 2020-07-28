@@ -45,6 +45,11 @@
 				<p>Hôm nay là một ngày hay hay, với tách trà trên tay, ta cùng thổi giấc mơ bay bay…<span>Cùng chia sẻ với Hiên Cúc Vàng tại các kênh thông tin này ngay</span></p>
 			</div>
 			<div class="social">
+				<?php 
+
+$groups = acf_get_field_groups(array('post_type' => 'contact_info'));
+
+?>
 				<div class="social-ico facebook-ico"><a href="<?php echo  get_field('facebook') ?>"><i class="fab fa-facebook-f"></i></a></div>
 				<div class="social-ico insta-ico"><a href="#"><i class="fab fa-instagram"></i></a></div>
 				<div class="social-ico youtube-ico"><a href="#"><i class="fab fa-youtube"></i></a></div>

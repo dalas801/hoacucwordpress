@@ -41,7 +41,7 @@ $categories = get_the_category();
 $category_id = $categories[0]->cat_ID;
 $arg=array('cat'=>$category_id,);
 $catquery = new WP_Query( $arg );
-
+$date=get_the_date( 'd.m.Y' );
 
 
 if($catquery->have_posts()){

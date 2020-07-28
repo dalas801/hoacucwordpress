@@ -1177,7 +1177,7 @@ h3{
   font-size: 1.2em !important;
 }
 .detailView .b-hero .b-post__hero-image{
-  background-attachment: scroll;
+  /*background-attachment: scroll;*/
 }
 }
 @media screen and (max-width: 767px){

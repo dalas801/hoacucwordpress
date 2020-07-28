@@ -586,8 +586,8 @@ section{
 .newPostList .slick-dots{
       text-align: unset !important;
 }
-.newPostList{
-   
+#newPost .imgContainer{
+  flex: 1 1 600px;
 }
 .detailPost{
   padding: 1em;
@@ -879,7 +879,7 @@ content: "";
     background-color: white;
 
 }
-.btnRegister:hover,.et_pb_button:hover{
+.btnRegister:hover,.wpcf7-submit:hover{
 
   color: white;
   background-color:#69B178;
@@ -935,6 +935,7 @@ justify-content: center;
   align-items: center;
 
 }
+
 .social{
 margin: 1em;
 }
@@ -1071,6 +1072,9 @@ button:focus {
 }
 
 @media screen and (max-width : 768px) {
+  #listView .description,.relate .description{
+    display: none;
+  }
   .b-sticky-share__wrap{
     display: none;
   }
