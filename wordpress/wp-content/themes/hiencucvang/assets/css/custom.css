@@ -1060,7 +1060,7 @@ button:focus {
   
 
 }
-.b-read__wrap {
+.b-read__wrap,.b-read__wrap_bio {
   width: 768px;
 }
 .b-read__wrap img{
@@ -1242,7 +1242,7 @@ h3{
     
       min-width: 120%;
   }
-  .b-read__wrap {
+  .b-read__wrap,.b-read__wrap_bio {
   
     padding-right: 8vw;
     padding-left: 8vw;
@@ -1251,9 +1251,7 @@ h3{
     box-shadow: none;
     margin-bottom: 1em;
   }
-  .b-post__details-wrap{
-    display: block;
-  }
+  
   .b-post__hero-inner .description{
     font-size: 1.2em;
   }

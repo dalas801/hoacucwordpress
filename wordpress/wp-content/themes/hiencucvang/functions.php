@@ -267,3 +267,4 @@ elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archive
 elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
 echo '</ul>';
 }
+

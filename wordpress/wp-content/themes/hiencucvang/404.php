@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	
-<h1 style="margin-top:150px;text-align:center">trang 404</h1>
+<h2 style="margin-top:150px;text-align:center;color:#F5CB5C;">Rất tiếc trang bạn truy cập không tồn tại</h1>
 
 <?php
 get_footer();

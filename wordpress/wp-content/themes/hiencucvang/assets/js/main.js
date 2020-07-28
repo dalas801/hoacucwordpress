@@ -45,19 +45,21 @@
 //     mobile.classList.toggle('navigation');
 //   }, false);
 
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-    var site_header=document.querySelector(".body");
-    var templateDirectory = "<?php bloginfo('stylesheet_directory'); ?>";
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    site_header.classList.add("fixPosition");
-      document.querySelector(".logoImg").src=templateDirectory+ '/assets/img/logoscroll.png';
-  } else {
-    site_header.classList.remove("fixPosition");
-    document.querySelector(".logoImg").src=templateDirectory+ '/assets/img/logo@2x.png';
-   
-  }
-}
+// window.onscroll = function() {scrollFunction()};
+// function scrollFunction() {
+//     var site_header=document.querySelector(".body");
+//   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//     site_header.classList.add("fixPosition");
+//       document.querySelector(".logoImg").src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logoscroll.png";
+//     // document.getElementById("navbar").style.padding = "30px 10px";
+//     // document.getElementById("logo").style.fontSize = "25px";
+//   } else {
+    
+//     document.querySelector(".logoImg").src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo@2x.png";
+//     site_header.classList.remove("fixPosition");
+//     // document.getElementById("logo").style.fontSize = "35px";
+//   }
+// }
 
 var image_search =  document.getElementById("search-icon-open");
 var search_icon = document.getElementById('search-icon');
