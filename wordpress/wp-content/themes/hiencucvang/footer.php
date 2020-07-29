@@ -45,15 +45,21 @@
 				<p>Hôm nay là một ngày hay hay, với tách trà trên tay, ta cùng thổi giấc mơ bay bay…<span>Cùng chia sẻ với Hiên Cúc Vàng tại các kênh thông tin này ngay</span></p>
 			</div>
 			<div class="social">
-				<?php 
+				<?php $catquery = new WP_Query( 'post_type=contact_info&posts_per_page=1' );
 
-$groups = acf_get_field_groups(array('post_type' => 'contact_info'));
 
-?>
+if($catquery->have_posts()){
+ while($catquery->have_posts()) : $catquery->the_post(); ?>
+
 				<div class="social-ico facebook-ico"><a href="<?php echo  get_field('facebook') ?>"><i class="fab fa-facebook-f"></i></a></div>
-				<div class="social-ico insta-ico"><a href="#"><i class="fab fa-instagram"></i></a></div>
-				<div class="social-ico youtube-ico"><a href="#"><i class="fab fa-youtube"></i></a></div>
-					<div class="social-ico twitter-ico"><a href="#"><i class="fab fa-twitter"></i></a></div>
+				<div class="social-ico insta-ico"><a href="<?php echo  get_field('instagram') ?>"><i class="fab fa-instagram"></i></a></div>
+				<div class="social-ico youtube-ico"><a href="<?php echo  get_field('youtube') ?>"><i class="fab fa-youtube"></i></a></div>
+					<div class="social-ico twitter-ico"><a href="<?php echo  get_field('twitter') ?>"><i class="fab fa-twitter"></i></a></div>
+					
+<?php endwhile;
+	wp_reset_postdata();
+}
+?>
 			</div>
 			<div class="email-info">
 
