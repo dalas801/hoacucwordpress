@@ -11,7 +11,7 @@ $date=get_the_date( 'd.m.Y' );
 ?>
 <!-- HERO
 			================================================== -->
-			<section id="hero" data-type="background" data-speed="5">
+			<section id="hero" class="banner-top" data-type="background" data-speed="5">
 				<div class="banner_hero">
 					<div class="glide__track" data-glide-el="track">
 						<ul class="glide__slides">

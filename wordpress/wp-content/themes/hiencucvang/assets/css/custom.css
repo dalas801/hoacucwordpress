@@ -1211,12 +1211,53 @@ h3{
 }
 }
 @media screen and (max-width : 568px) {
+  #life .imgContainer{
+    margin-left: 3em;
+  }
+  #health h1{
+    padding-top: 10px;
+
+  }
+  #life .date{
+    left: -10px;
+  }
+  #life .inner-header{
+    margin-bottom: 2em;
+  }
+  #recipe .lead, footer .lead{
+    font-size: 1.1em;
+  }
+  #health .seeMore{
+    margin: 1.5em;
+  }
+  #life{
+    margin-top: 3em;
+  }
+  #newPost h1, #health h1, #recipe h1 ,#review h1{
+    margin-bottom: 0.5em;
+    font-size: 2em;
+  }
+  .relate h1{
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  #recipe .postslide.left{
+    margin-top: 4em;
+  }
+  .cc-post{
+    margin-top: 30px;
+  }
+  #recipe{
+    padding: 4em 0 1em 0;
+  }
   .b-nav-search_icon{
     margin-left: 0;
   }
-  
+  .banner-top{
+    margin-bottom: 1em !important;
+  }
   section {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
 }
   #newPost .container .row .col-sm-4:last-child .postslide{
     margin-top: 40px;
@@ -1233,7 +1274,7 @@ h3{
     margin-top: 0;
   }
  
-  b-post__hero-thumbnail{
+  .b-post__hero-thumbnail{
     margin-bottom: 1em;
   }
   .b-post-bottom__author {
@@ -1253,7 +1294,7 @@ h3{
 }
   .b-post__details-wrap-cell{
     box-shadow: none;
-    margin-bottom: 1em;
+ 
   }
   
   .b-post__hero-inner .description{
@@ -1271,7 +1312,7 @@ h3{
   }
 
   .detailPost{
-    padding: 0 1em 2em 1em;
+    padding: 0 1em 0.5em 1em;
   }
   .TopImage,.banner_hero{
     -webkit-box-flex: unset !important;

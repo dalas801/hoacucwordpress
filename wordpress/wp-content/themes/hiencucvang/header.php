@@ -57,7 +57,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="body">
+<body  class="body">
 <?php wp_body_open(); ?>
 
 	

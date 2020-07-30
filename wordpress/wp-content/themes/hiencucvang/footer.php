@@ -25,7 +25,7 @@
 			<p class="lead">Một khi đã tham gia vào Project Sugar, trái tim bạn sẽ luôn đồng hành cùng những giá trị Sugar mong muốn mang tới ...</p>
 		</div>
 		<div class="col-sm-8">
-			<div class="container">
+			<div class="">
 				
 				<?php echo do_shortcode('[contact-form-7 id="160" title="contact footer"]'); ?>
 			
@@ -63,7 +63,7 @@ if($catquery->have_posts()){
 			</div>
 			<div class="email-info">
 
-			<i aria-hidden="true" class="far fa-envelope icon_color"></i><span> vitratuhoa@mail.com</span>
+			<i aria-hidden="true" class="far fa-envelope icon_color"></i><span> vitratuhoa@gmail.com</span>
 </div>
 		</div>
 		

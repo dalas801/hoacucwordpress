@@ -38,18 +38,18 @@ $user = wp_get_current_user();
 						<p class="description"><?php echo wp_trim_words(get_the_excerpt(),30) ?></p>
 						
 						<div class="b-post__details-wrap">
-							<a class="b-post__details-wrap-cell ">
-							<div  class="b-post__hero-thumbnail">
+							
+							<div  class="b-post__hero-thumbnail  ">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 25 ); ?>
 						
 						
 						</div>
-								<div class="b-post__hero-detail-text">
+								<div class="b-post__hero-detail-text b-post__details-wrap-cell ">
 								<?php echo wp_kses_post( wpautop( get_the_author() ) ); ?>
 												
 												</div>
 								
-							  </a>
+							 
 							  
 							  <div class="b-post__details-wrap-cell">
 								<div class="b-post__hero-detail-text"><?php echo $date; ?></div>
