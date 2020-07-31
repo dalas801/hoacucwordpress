@@ -13,10 +13,10 @@ $desktop-width: 1024px;
 
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+  ::-webkit-input-placeholder {@content};
+  :-moz-placeholder           {@content};
+  ::-moz-placeholder          {@content};
+  :-ms-input-placeholder      {@content} ; 
 }
 @mixin transition($params) {
   -webkit-transition: $params;
@@ -803,6 +803,7 @@ $primary: rgb(182,157,230);
     font-weight: 400;
   }
   .number-492,.wpcf7-text,.wpcf7-email,.wpcf7-textarea {
+    margin-bottom: 0.5em;
     display: block;
     width: 100%;
     height: calc(1.5em + .75rem + 2px);

@@ -42,7 +42,8 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="quote_text">
-				<p>Hôm nay là một ngày hay hay, với tách trà trên tay, ta cùng thổi giấc mơ bay bay…<span>Cùng chia sẻ với Hiên Cúc Vàng tại các kênh thông tin này ngay</span></p>
+				<p class="ml3" >Hôm nay là một ngày hay hay, với tách trà trên tay, ta cùng thổi giấc mơ bay bay…</p>
+				<p>Cùng chia sẻ với Hiên Cúc Vàng tại các kênh thông tin này ngay</p>
 			</div>
 			<div class="social">
 				<?php $catquery = new WP_Query( 'post_type=contact_info&posts_per_page=1' );
@@ -206,6 +207,8 @@ spaceBetween: 20
 },
 });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/main.js"></script>
+
 </body>
 </html>

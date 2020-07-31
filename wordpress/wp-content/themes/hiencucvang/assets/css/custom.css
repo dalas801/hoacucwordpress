@@ -74,7 +74,7 @@ footer ul li {
   text-align: center;
 }
 .quote_text p span{
-  display: block;
+  /* display: block; */
 }
 a{
 	opacity: 1;
@@ -711,7 +711,7 @@ opacity:1;
   max-width: 300px;
       margin: 2em 0;
 }
-#recipe  span,footer  span{
+#recipe  span{
   display: block;
 }
 
