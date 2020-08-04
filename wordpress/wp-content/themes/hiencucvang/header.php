@@ -33,7 +33,7 @@
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 		
 		<!-- Font Awesome Icons -->
-		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome/css/all.min.css" rel="stylesheet">
+		<!-- <link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome/css/all.min.css" rel="stylesheet"> -->
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/allfontawesome.min.js"></script>
 		<!-- Custom CSS -->
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/customsas.css" rel="stylesheet">
@@ -53,10 +53,13 @@
 		<!-- Add the slick-theme.css if you want default styling -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+		<!-- fb comment -->
+		<meta property="fb:app_id" content="335519780948399" />
+		<meta property="fb:admins" content="100019876544287"/>
 	<?php wp_head(); ?>
 </head>
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=335519780948399&autoLogAppEvents=1" nonce="Xba7GLoy"></script>
 <body  class="body">
 <?php wp_body_open(); ?>
 

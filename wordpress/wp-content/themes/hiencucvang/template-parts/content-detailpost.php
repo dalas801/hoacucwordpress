@@ -17,6 +17,8 @@ $user = wp_get_current_user();
   $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 
 ?>
+ <div class="line" id="scrollIndicator"></div>
+ <div class="mainContent">
 <section id="hero" class="detailView">
 			
 
@@ -133,4 +135,5 @@ $user = wp_get_current_user();
 </div>
 </div>
 </main>
+</div>
 

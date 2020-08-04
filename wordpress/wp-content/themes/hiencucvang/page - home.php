@@ -332,5 +332,20 @@ if($catquery->have_posts()){
 <div class="swiper-pagination"></div>
 </div>
 </section>	
-
+<script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+<script>
+new Glide('.banner_hero',{
+	perView: 1,
+	type:'carousel',
+	dots:'#dots',
+	variableWidth: true,
+	// focusAt: 'center',
+	breakpoints:{
+		800:{
+			perView:1
+		}
+	}
+	
+}).mount();
+</script>
 <?php get_footer(); ?>

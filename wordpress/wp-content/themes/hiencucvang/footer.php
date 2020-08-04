@@ -119,22 +119,7 @@ if($catquery->have_posts()){
 
 <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.5.1.slim.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
-<script>
-new Glide('.banner_hero',{
-	perView: 1,
-	type:'carousel',
-	dots:'#dots',
-	variableWidth: true,
-	// focusAt: 'center',
-	breakpoints:{
-		800:{
-			perView:1
-		}
-	}
-	
-}).mount();
-</script>
+
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->

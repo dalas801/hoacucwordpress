@@ -85,7 +85,7 @@ search_icon.addEventListener('click', function() {
   });
 });
 
-
+//text fade footer
 var textWrapper = document.querySelector('.ml3');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -104,6 +104,7 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
+  
 
 
 

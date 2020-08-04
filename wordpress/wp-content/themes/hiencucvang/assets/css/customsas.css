@@ -143,8 +143,10 @@
 .b-nav-search_wrap {
   position: absolute;
   top: 100%;
-  display: none;
+  height: 0;
   width: 100%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
           justify-content: center;
@@ -158,20 +160,35 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 65px;
 }
 
-.b-nav-search_wrap .b-nav-search_inner {
-  width: 100%;
+.b-nav-search_wrap.openSearch .b-nav-search_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 1;
   height: 70px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.b-nav-search_wrap.openSearch .b-nav-search_inner .w-input {
+  opacity: 1;
+}
+
+.b-nav-search_wrap .b-nav-search_inner {
+  width: 100%;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .b-nav-search_wrap form {
@@ -187,19 +204,46 @@
   color: #addfb8;
 }
 
+@media only screen and (max-width: 568px) {
+  .b-nav-search_wrap form ::-webkit-input-placeholder {
+    font-size: 0.8em;
+  }
+}
+
 .b-nav-search_wrap form :-moz-placeholder {
   color: #addfb8;
+}
+
+@media only screen and (max-width: 568px) {
+  .b-nav-search_wrap form :-moz-placeholder {
+    font-size: 0.8em;
+  }
 }
 
 .b-nav-search_wrap form ::-moz-placeholder {
   color: #addfb8;
 }
 
+@media only screen and (max-width: 568px) {
+  .b-nav-search_wrap form ::-moz-placeholder {
+    font-size: 0.8em;
+  }
+}
+
 .b-nav-search_wrap form :-ms-input-placeholder {
   color: #addfb8;
 }
 
+@media only screen and (max-width: 568px) {
+  .b-nav-search_wrap form :-ms-input-placeholder {
+    font-size: 0.8em;
+  }
+}
+
 .b-nav-search_wrap form .w-input {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 0;
   font-size: 1.4em;
   font-weight: 300;
   display: block;
@@ -550,6 +594,11 @@ ul.breadcrumb li + li:before {
   letter-spacing: 0.1px;
 }
 
+.b-read__wrap h4 {
+  line-height: 1.6em;
+  letter-spacing: 0.1px;
+}
+
 .cc-post-bottom {
   margin-top: 4em;
 }
@@ -681,7 +730,7 @@ ul.breadcrumb li + li:before {
 }
 
 .cc-post blockquote {
-  padding: 2em;
+  padding: 0.5em 2em;
   font-size: 1.7em;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -690,7 +739,18 @@ ul.breadcrumb li + li:before {
 
 @media screen and (max-width: 568px) {
   .cc-post blockquote {
-    padding: 1.4em;
+    padding: 0.5em 1em;
+  }
+}
+
+.fbComment {
+  margin-bottom: 5em;
+}
+
+@media screen and (min-width: 922px) {
+  .fbComment {
+    padding: 0 100px !important;
+    width: 892px !important;
   }
 }
 
@@ -816,7 +876,7 @@ ul.breadcrumb li + li:before {
   right: 0.5em;
 }
 
-.et_pb_button {
+.wpcf7-submit {
   margin: 1em auto 0;
   padding: 0.5em 1em;
   -webkit-transition-duration: 0.4s;
@@ -829,6 +889,22 @@ ul.breadcrumb li + li:before {
   border: 2px solid #69B178;
   background-color: white;
   font-weight: 400;
+}
+
+.line {
+  background: #f3ea76d9;
+  height: 2px;
+  border-radius: 3px;
+  width: 0%;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+}
+
+@media screen and (max-width: 576px) {
+  .line {
+    background: #69B178;
+  }
 }
 
 .number-492, .wpcf7-text, .wpcf7-email, .wpcf7-textarea {
